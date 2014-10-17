@@ -29,6 +29,7 @@ if( function_exists( 'acf_add_options_page' ) ) {
  * @link http://www.advancedcustomfields.com/resources/acf_add_options_sub_page/ Options sub-pages description.
  */
 if( function_exists( 'acf_add_options_sub_page' ) ) {
+    /*
     acf_add_options_sub_page( array(
         'title' => 'Header',
         'parent' => 'theme-general-settings',
@@ -41,6 +42,12 @@ if( function_exists( 'acf_add_options_sub_page' ) ) {
     ) );
     acf_add_options_sub_page( array(
         'title' => 'Sidebar',
+        'parent' => 'theme-general-settings',
+        'capability' => 'manage_options'
+    ) );
+    */
+    acf_add_options_sub_page( array(
+        'title' => 'Social',
         'parent' => 'theme-general-settings',
         'capability' => 'manage_options'
     ) );
