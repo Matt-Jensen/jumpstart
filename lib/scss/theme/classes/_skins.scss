@@ -1,13 +1,8 @@
 // Common skin classes, could be gradient backgrounds that are reused throughout etc.
 
-/*-------------------------
-* Example
----------------------------
-
-.s-card {
-	background: #fff;
-	border: 1px solid #ccc;
-	padding: $default-baseline;
+.s-sub-page-header {
+	background: url(images/header-small.jpg);
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-size: auto;
 }
-
-***************************/

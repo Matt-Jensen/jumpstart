@@ -30,7 +30,7 @@ Version: 0.5.5
 2. Foundation Dependencies
 --------------------------------------------------------------*/
 // Uncomment to customize Zurb Foundation For Sites
-// @import 'settings';
+@import 'settings';
 @import 'fonts';
 
 /*--------------------------------------------------------------
@@ -42,16 +42,16 @@ Version: 0.5.5
 4. Foundation Plugins
 --------------------------------------------------------------*/
 // Uncomment to customize Foundation Utility Belt settings
-// @import 'utility-belt-settings';
+@import 'utility-belt-settings';
 
 // Uncomment to start wearing a utility belt
-// @import 'vendor/foundation-utility-belt/foundation-utility-belt';
+@import 'vendor/foundation-utility-belt/foundation-utility-belt';
 
 /*--------------------------------------------------------------
 5. Vendor Files
 --------------------------------------------------------------*/
 // Uncomment the Bourbon line to use Bourbon SASS in the project.
-// @import "../../node_modules/node-bourbon/assets/stylesheets/bourbon";
+@import "../../node_modules/node-bourbon/assets/stylesheets/bourbon";
 
 /*--------------------------------------------------------------
 6. Theme Dependencies

@@ -23,7 +23,7 @@ function jumpstart_scripts() {
     //wp_enqueue_script( 'foundation-accordion', LIB . '/foundation/js/foundation/foundation.accordion.js', array( 'jquery', 'foundation' ), '1.0', TRUE );
     //wp_enqueue_script( 'foundation-alert', LIB . '/foundation/js/foundation/foundation.alert.js', array( 'jquery' ), '1.0', TRUE );
     //wp_enqueue_script( 'foundation-clearing', LIB . '/foundation/js/foundation/foundation.clearing.js', array( 'jquery', 'foundation' ), '1.0', TRUE );
-    //wp_enqueue_script( 'foundation-dropdown', LIB . '/foundation/js/foundation/foundation.dropdown.js', array( 'jquery', 'foundation' ), '1.0', TRUE );
+    // wp_enqueue_script( 'foundation-dropdown', LIB . '/foundation/js/foundation/foundation.dropdown.js', array( 'jquery', 'foundation' ), '1.0', TRUE );
     //wp_enqueue_script( 'foundation-equalizer', LIB . '/foundation/js/foundation/foundation.equalizer.js', array( 'jquery', 'foundation' ), '1.0', TRUE );
     //wp_enqueue_script( 'foundation-interchange', LIB . '/foundation/js/foundation/foundation.interchange.js', array( 'jquery', 'foundation' ), '1.0', TRUE );
     //wp_enqueue_script( 'foundation-joyride', LIB . '/foundation/js/foundation/foundation.joyride.js', array( 'jquery', 'foundation' ), '1.0', TRUE );
@@ -35,6 +35,7 @@ function jumpstart_scripts() {
     //wp_enqueue_script( 'foundation-tab', LIB . '/foundation/js/foundation/foundation.tab.js', array( 'jquery', 'foundation' ), '1.0', TRUE );
     //wp_enqueue_script( 'foundation-tooltip', LIB . '/foundation/js/foundation/foundation.tooltip.js', array( 'jquery', 'foundation' ), '1.0', TRUE );
     //wp_enqueue_script( 'foundation-toolbar', LIB . '/foundation/js/foundation/foundation.toolbar.js', array( 'jquery', 'foundation' ), '1.0', TRUE );
+    wp_enqueue_script( 'foundation-toolbar', LIB . '/foundation/js/foundation/foundation.topbar.js', array( 'jquery', 'foundation' ), '1.0', TRUE );
 
     // All vendor scripts in lib/js/vendor
     wp_enqueue_script( 'vendor-scripts', get_stylesheet_directory_uri() . '/vendor.js', array('jquery', 'foundation'), '1.0', TRUE );

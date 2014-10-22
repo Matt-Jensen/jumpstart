@@ -21,13 +21,12 @@
 </head>
 
 <body>
-	<header>
-		<div>
-			<h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<h2><?php bloginfo( 'description' ); ?></h2>
-		</div>
-
-		<nav>
-			<?php wp_nav_menu( array( 'theme_location' => 'header_menu' ) ); ?>
+	<header class="s-sub-page-header">
+		<nav class="row top-bar" data-topbar role="navigation">
+			<section class="top-bar-section">
+				<ul class="right">
+					<?php echo jumpstart_the_topnav_lis('Header Menu'); ?>
+				</ul>
+			</section>
 		</nav><!-- nav -->
 	</header><!-- header -->

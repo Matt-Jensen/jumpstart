@@ -55,7 +55,7 @@
 $rem-base: 18px;
 
 // Allows the use of rem-calc() or lower-bound() in your settings
-@import "foundation/functions";
+@import "../foundation/scss/foundation/functions";
 
 // The default font-size is set to 100% of the browser style sheet (usually 16px)
 // for compatibility with browser-based text zoom or user-set defaults.
@@ -69,7 +69,7 @@ $base-font-size: 100%;
 $base-line-height: 144%;
 
 // We use this to control whether or not CSS classes come through in the gem files.
-$include-html-classes: true;
+$include-html-classes: true; 
 // $include-print-styles: true;
 $include-html-global-classes: $include-html-classes;
 
@@ -79,7 +79,7 @@ $include-html-global-classes: $include-html-classes;
 $include-html-grid-classes: $include-html-classes;
 $include-xl-html-grid-classes: false;
 
-$row-width: rem-calc(1000);
+$row-width: rem-calc(1062);
 $total-columns: 12;
 $column-gutter: rem-calc(30);
 
@@ -99,7 +99,7 @@ $warning-color: #f08a24;
 $info-color: #a0d3e8;
 
 $white       : #f1f1f1; // Theme
-$ghost       : #FAFAFA;
+$ghost       : #fefefe; // Theme
 $snow        : #F9F9F9;
 $vapor       : #F6F6F6;
 $white-smoke : #F5F5F5;
@@ -108,7 +108,7 @@ $smoke       : #EEEEEE;
 $gainsboro   : #DDDDDD;
 $iron        : #909090; // Theme
 $base        : #AAAAAA;
-$aluminum    : #999999;
+$aluminum    : #7a8894; // Theme
 $jumbo       : #888888;
 $monsoon     : #777777;
 $steel       : #666666;
@@ -121,7 +121,7 @@ $black       : #080808; // Theme
 // We use these to control various global styles
 $body-bg: #f0f0f0;
 $body-font-color: $jet;
-$body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$body-font-family: source-sans-pro, lato, "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 $body-font-weight: $font-weight-normal;
 $body-font-style: normal;
 
@@ -248,7 +248,7 @@ $paragraph-text-rendering: optimizeLegibility;
 // $code-padding: rem-calc(2) rem-calc(5) rem-calc(1);
 
 // We use these to style anchors
-$anchor-text-decoration: none;
+$anchor-text-decoration: underline;
 $anchor-text-decoration-hover: none;
 $anchor-font-color: $primary-color;
 $anchor-font-color-hover: scale-color($primary-color, $lightness: -14%);
@@ -265,7 +265,7 @@ $list-font-size: $paragraph-font-size;
 $list-line-height: $paragraph-line-height;
 $list-margin-bottom: $paragraph-margin-bottom;
 $list-style-position: outside;
-$list-side-margin: 1.1rem;
+$list-side-margin: 0rem;
 $list-ordered-side-margin: 1.4rem;
 $list-side-margin-no-bullet: 0;
 $list-nested-margin: rem-calc(20);
@@ -310,7 +310,7 @@ $acronym-underline: 1px dotted $gainsboro;
 // 01. Accordion
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// $include-html-accordion-classes: $include-html-classes;
+$include-html-accordion-classes: false;
 
 // $accordion-navigation-padding: rem-calc(16);
 // $accordion-navigation-bg-color: $silver  ;
@@ -326,7 +326,7 @@ $acronym-underline: 1px dotted $gainsboro;
 // 02. Alert Boxes
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// $include-html-alert-classes: $include-html-classes;
+$include-html-alert-classes: false;
 
 // We use this to control alert padding.
 // $alert-padding-top: rem-calc(14);
@@ -368,7 +368,7 @@ $acronym-underline: 1px dotted $gainsboro;
 // 03. Block Grid
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// $include-html-block-grid-classes: $include-html-classes;
+$include-html-block-grid-classes: false;
 // $include-xl-html-block-grid-classes: false;
 
 // We use this to control the maximum number of block grid elements per row
@@ -382,7 +382,7 @@ $acronym-underline: 1px dotted $gainsboro;
 // 04. Breadcrumbs
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// $include-html-nav-classes: $include-html-classes;
+$include-html-nav-classes: false;
 
 // We use this to set the background color for the breadcrumb container.
 // $crumb-bg: scale-color($secondary-color, $lightness: 55%);
@@ -413,57 +413,57 @@ $acronym-underline: 1px dotted $gainsboro;
 // 05. Buttons
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// $include-html-button-classes: $include-html-classes;
+$include-html-button-classes: $include-html-classes;
 
 // We use these to build padding for buttons.
-// $button-tny: rem-calc(10);
-// $button-sml: rem-calc(14);
-// $button-med: rem-calc(16);
-// $button-lrg: rem-calc(18);
+$button-tny: rem-calc(10);
+$button-sml: rem-calc(14);
+$button-med: rem-calc(16);
+$button-lrg: rem-calc(18);
 
 // We use this to control the display property.
-// $button-display: inline-block;
-// $button-margin-bottom: rem-calc(20);
+$button-display: inline-block;
+$button-margin-bottom: rem-calc(20);
 
 // We use these to control button text styles.
-// $button-font-family: $body-font-family;
-// $button-font-color: $white;
-// $button-font-color-alt: $oil;
-// $button-font-tny: rem-calc(11);
-// $button-font-sml: rem-calc(13);
-// $button-font-med: rem-calc(16);
-// $button-font-lrg: rem-calc(20);
-// $button-font-weight: $font-weight-normal;
-// $button-font-align: center;
+$button-font-family: $body-font-family;
+$button-font-color: $white;
+$button-font-color-alt: $oil;
+$button-font-tny: rem-calc(11);
+$button-font-sml: rem-calc(12);
+$button-font-med: rem-calc(16);
+$button-font-lrg: rem-calc(20);
+$button-font-weight: $font-weight-normal;
+$button-font-align: center;
 
 // We use these to control various hover effects.
-// $button-function-factor: -20%;
+$button-function-factor: -20%;
 
 // We use these to control button border and hover styles.
-// $button-border-width: 0px;
-// $button-border-style: solid;
-// $button-bg-color: $primary-color;
-// $button-bg-hover: scale-color($button-bg-color, $lightness: $button-function-factor);
-// $button-border-color: $button-bg-hover;
-// $secondary-button-bg-hover: scale-color($secondary-color, $lightness: $button-function-factor);
-// $secondary-button-border-color: $secondary-button-bg-hover;
-// $success-button-bg-hover: scale-color($success-color, $lightness: $button-function-factor);
-// $success-button-border-color: $success-button-bg-hover;
-// $alert-button-bg-hover: scale-color($alert-color, $lightness: $button-function-factor);
-// $alert-button-border-color: $alert-button-bg-hover;
+$button-border-width: 0px;
+$button-border-style: solid;
+$button-bg-color: $primary-color;
+$button-bg-hover: scale-color($button-bg-color, $lightness: $button-function-factor);
+$button-border-color: $button-bg-hover;
+$secondary-button-bg-hover: scale-color($secondary-color, $lightness: $button-function-factor);
+$secondary-button-border-color: $secondary-button-bg-hover;
+$success-button-bg-hover: scale-color($success-color, $lightness: $button-function-factor);
+$success-button-border-color: $success-button-bg-hover;
+$alert-button-bg-hover: scale-color($alert-color, $lightness: $button-function-factor);
+$alert-button-border-color: $alert-button-bg-hover;
 
 // We use this to set the default radius used throughout the core.
-// $button-radius: $global-radius;
-// $button-round: $global-rounded;
+$button-radius: $global-radius;
+$button-round: $global-rounded;
 
 // We use this to set default opacity and cursor for disabled buttons.
-// $button-disabled-opacity: 0.7;
-// $button-disabled-cursor: $cursor-default-value;
+$button-disabled-opacity: 0.7;
+$button-disabled-cursor: $cursor-default-value;
 
 // 06. Button Groups
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// $include-html-button-classes: $include-html-classes;
+$include-html-button-classes: false;
 
 // Sets the margin for the right side by default, and the left margin if right-to-left direction is used
 // $button-bar-margin-opposite: rem-calc(10);
@@ -472,7 +472,7 @@ $acronym-underline: 1px dotted $gainsboro;
 // 07. Clearing
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// $include-html-clearing-classes: $include-html-classes;
+$include-html-clearing-classes: false;
 
 // We use these to set the background colors for parts of Clearing.
 // $clearing-bg: $oil;
@@ -502,7 +502,7 @@ $acronym-underline: 1px dotted $gainsboro;
 // 08. Dropdown
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// $include-html-dropdown-classes: $include-html-classes;
+$include-html-dropdown-classes: false;
 
 // We use these to controls height and width styles.
 // $f-dropdown-max-width: 200px;
@@ -553,7 +553,7 @@ $acronym-underline: 1px dotted $gainsboro;
 // 09. Dropdown Buttons
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// $include-html-button-classes: $include-html-classes;
+$include-html-button-classes: false;
 
 // We use these to set the color of the pip in dropdown buttons
 // $dropdown-button-pip-color: $white;
@@ -591,7 +591,7 @@ $acronym-underline: 1px dotted $gainsboro;
 // 10. Flex Video
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// $include-html-media-classes: $include-html-classes;
+$include-html-media-classes: false;
 
 // We use these to control video container padding and margins
 // $flex-video-padding-top: rem-calc(25);
@@ -604,80 +604,81 @@ $acronym-underline: 1px dotted $gainsboro;
 // 11. Forms
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// $include-html-form-classes: $include-html-classes;
+$include-html-form-classes: $include-html-classes;
 
 // We use this to set the base for lots of form spacing and positioning styles
-// $form-spacing: rem-calc(16);
+$form-spacing: rem-calc(16);
 
 // We use these to style the labels in different ways
-// $form-label-pointer: pointer;
-// $form-label-font-size: rem-calc(14);
-// $form-label-font-weight: $font-weight-normal;
-// $form-label-line-height: 1.5;
-// $form-label-font-color: scale-color($black, $lightness: 30%);
-// $form-label-small-transform: capitalize;
-// $form-label-bottom-margin: 0;
-// $input-font-family: inherit;
-// $input-font-color: rgba(0,0,0,0.75);
-// $input-font-size: rem-calc(14);
-// $input-bg-color: $white;
-// $input-focus-bg-color: scale-color($white, $lightness: -2%);
-// $input-border-color: scale-color($white, $lightness: -20%);
-// $input-focus-border-color: scale-color($white, $lightness: -40%);
-// $input-border-style: solid;
-// $input-border-width: 1px;
-// $input-border-radius: $global-radius;
-// $input-disabled-bg: $gainsboro;
-// $input-disabled-cursor: $cursor-default-value;
-// $input-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+$form-label-pointer: pointer;
+$form-label-font-size: rem-calc(14);
+$form-label-font-weight: $font-weight-normal;
+$form-label-line-height: 1.5;
+$form-label-font-color: scale-color($black, $lightness: 30%);
+$form-label-small-transform: capitalize;
+$form-label-bottom-margin: 0;
+$input-font-family: inherit;
+$input-font-color: rgba(0,0,0,0.75);
+$input-font-size: rem-calc(14);
+$input-bg-color: $white;
+$input-focus-bg-color: scale-color($white, $lightness: -2%);
+$input-border-color: scale-color($white, $lightness: -20%);
+$input-focus-border-color: scale-color($white, $lightness: -40%);
+$input-border-style: solid;
+$input-border-width: 1px;
+$input-border-radius: $global-radius;
+$input-disabled-bg: $gainsboro;
+$input-disabled-cursor: $cursor-default-value;
+$input-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
 
 // We use these to style the fieldset border and spacing.
-// $fieldset-border-style: solid;
-// $fieldset-border-width: 1px;
-// $fieldset-border-color: $gainsboro;
-// $fieldset-padding: rem-calc(20);
-// $fieldset-margin: rem-calc(18 0);
+$fieldset-border-style: solid;
+$fieldset-border-width: 1px;
+$fieldset-border-color: $gainsboro;
+$fieldset-padding: rem-calc(20);
+$fieldset-margin: rem-calc(18 0);
 
 // We use these to style the legends when you use them
-// $legend-bg: $white;
-// $legend-font-weight: $font-weight-bold;
-// $legend-padding: rem-calc(0 3);
+$legend-bg: $white;
+$legend-font-weight: $font-weight-bold;
+$legend-padding: rem-calc(0 3);
 
 // We use these to style the prefix and postfix input elements
-// $input-prefix-bg: scale-color($white, $lightness: -5%);
-// $input-prefix-border-color: scale-color($white, $lightness: -20%);
-// $input-prefix-border-size: 1px;
-// $input-prefix-border-type: solid;
-// $input-prefix-overflow: hidden;
-// $input-prefix-font-color: $oil;
-// $input-prefix-font-color-alt: $white;
+$input-prefix-bg: scale-color($white, $lightness: -5%);
+$input-prefix-border-color: scale-color($white, $lightness: -20%);
+$input-prefix-border-size: 1px;
+$input-prefix-border-type: solid;
+$input-prefix-overflow: hidden;
+$input-prefix-font-color: $oil;
+$input-prefix-font-color-alt: $white;
 
 // We use this setting to turn on/off HTML5 number spinners (the up/down arrows)
-// $input-number-spinners: true;
+$input-number-spinners: true;
 
 // We use these to style the error states for inputs and labels
-// $input-error-message-padding: rem-calc(6 9 9);
-// $input-error-message-top: -1px;
-// $input-error-message-font-size: rem-calc(12);
-// $input-error-message-font-weight: $font-weight-normal;
-// $input-error-message-font-style: italic;
-// $input-error-message-font-color: $white;
-// $input-error-message-font-color-alt: $oil;
+$input-error-message-padding: rem-calc(6 9 9);
+$input-error-message-top: -1px;
+$input-error-message-font-size: rem-calc(12);
+$input-error-message-font-weight: $font-weight-normal;
+$input-error-message-font-style: italic;
+$input-error-message-font-color: $white;
+$input-error-message-font-color-alt: $oil;
 
 // We use this to style the glowing effect of inputs when focused
-// $input-include-glowing-effect: true;
-// $glowing-effect-fade-time: 0.45s;
-// $glowing-effect-color: $input-focus-border-color;
+$input-include-glowing-effect: true;
+$glowing-effect-fade-time: 0.45s;
+$glowing-effect-color: $input-focus-border-color;
 
 // Select variables
-// $select-bg-color: $ghost;
-// $select-hover-bg-color: scale-color($select-bg-color, $lightness: -3%);
+$select-bg-color: $ghost;
+$select-hover-bg-color: scale-color($select-bg-color, $lightness: -3%);
 
 // 12. Icon Bar
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
 // We use these to style the icon-bar and items
-// $include-html-icon-bar-classes: $include-html-classes;
+$include-html-icon-bar-classes: false;
+
 // $icon-bar-bg: $oil;
 // $icon-bar-font-color: $white;
 // $icon-bar-font-size: 1rem;
@@ -692,7 +693,7 @@ $acronym-underline: 1px dotted $gainsboro;
 // 13. Inline Lists
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// $include-html-inline-list-classes: $include-html-classes;
+$include-html-inline-list-classes: false;
 
 // We use this to control the margins and padding of the inline list.
 // $inline-list-top-margin: 0;
@@ -715,7 +716,7 @@ $acronym-underline: 1px dotted $gainsboro;
 // 14. Joyride
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// $include-html-joyride-classes: $include-html-classes;
+$include-html-joyride-classes: false;
 
 // Controlling default Joyride styles
 // $joyride-tip-bg: $oil;
@@ -749,7 +750,7 @@ $acronym-underline: 1px dotted $gainsboro;
 // 15. Keystrokes
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// $include-html-keystroke-classes: $include-html-classes;
+$include-html-keystroke-classes: false;
 
 // We use these to control text styles.
 // $keystroke-font: "Consolas", "Menlo", "Courier", monospace;
@@ -771,7 +772,7 @@ $acronym-underline: 1px dotted $gainsboro;
 // 16. Labels
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// $include-html-label-classes: $include-html-classes;
+$include-html-label-classes: false;
 
 // We use these to style the labels
 // $label-padding: rem-calc(4 8 6);
@@ -787,7 +788,7 @@ $acronym-underline: 1px dotted $gainsboro;
 // 17. Magellan
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// $include-html-magellan-classes: $include-html-classes;
+$include-html-magellan-classes: false;
 
 // $magellan-bg: $white;
 // $magellan-padding: 0 !important;
@@ -795,79 +796,79 @@ $acronym-underline: 1px dotted $gainsboro;
 // 18. Off-canvas
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// $include-html-off-canvas-classes: $include-html-classes;
+$include-html-off-canvas-classes: $include-html-classes;
 
-// $tabbar-bg: $oil;
-// $tabbar-height: rem-calc(45);
-// $tabbar-icon-width: $tabbar-height;
-// $tabbar-line-height: $tabbar-height;
-// $tabbar-color: $white;
-// $tabbar-middle-padding: 0 rem-calc(10);
+$tabbar-bg: $oil;
+$tabbar-height: rem-calc(45);
+$tabbar-icon-width: $tabbar-height;
+$tabbar-line-height: $tabbar-height;
+$tabbar-color: $white;
+$tabbar-middle-padding: 0 rem-calc(10);
 
 // Off Canvas Divider Styles
-// $tabbar-right-section-border: solid 1px scale-color($tabbar-bg, $lightness: 13%);
-// $tabbar-left-section-border: solid 1px scale-color($tabbar-bg, $lightness: -50%);
+$tabbar-right-section-border: solid 1px scale-color($tabbar-bg, $lightness: 13%);
+$tabbar-left-section-border: solid 1px scale-color($tabbar-bg, $lightness: -50%);
 
 // Off Canvas Tab Bar Headers
-// $tabbar-header-color: $white;
-// $tabbar-header-weight: $font-weight-bold;
-// $tabbar-header-line-height: $tabbar-height;
-// $tabbar-header-margin: 0;
+$tabbar-header-color: $white;
+$tabbar-header-weight: $font-weight-bold;
+$tabbar-header-line-height: $tabbar-height;
+$tabbar-header-margin: 0;
 
 // Off Canvas Menu Variables
-// $off-canvas-width: rem-calc(250);
-// $off-canvas-bg: $oil;
-// $off-canvas-bg-hover: background: scale-color($tabbar-bg, $lightness: -30%);
+$off-canvas-width: rem-calc(250);
+$off-canvas-bg: $oil;
+$off-canvas-bg-hover: scale-color($tabbar-bg, $lightness: -30%);
 
 // Off Canvas Menu List Variables
-// $off-canvas-label-padding: 0.3rem rem-calc(15);
-// $off-canvas-label-color: $aluminum;
-// $off-canvas-label-text-transform: uppercase;
-// $off-canvas-label-font-size: rem-calc(12);
-// $off-canvas-label-font-weight: $font-weight-bold;
-// $off-canvas-label-bg: $tuatara;
-// $off-canvas-label-border-top: 1px solid scale-color($tuatara, $lightness: 14%);
-// $off-canvas-label-border-bottom: none;
-// $off-canvas-label-margin:0;
-// $off-canvas-link-padding: rem-calc(10, 15);
-// $off-canvas-link-color: rgba($white, 0.7);
-// $off-canvas-link-border-bottom: 1px solid scale-color($off-canvas-bg, $lightness: -25%);
-// $off-canvas-back-bg: $tuatara;
-// $off-canvas-back-border-top: $off-canvas-label-border-top;
-// $off-canvas-back-border-bottom: $off-canvas-label-border-bottom;
-// $off-canvas-back-hover-bg: scale-color($off-canvas-back-bg, $lightness: -30%);
-// $off-canvas-back-hover-border-top: 1px solid scale-color($off-canvas-label-bg, $lightness: 14%);
-// $off-canvas-back-hover-border-bottom: none;
+$off-canvas-label-padding: 0.3rem rem-calc(15);
+$off-canvas-label-color: $aluminum;
+$off-canvas-label-text-transform: uppercase;
+$off-canvas-label-font-size: rem-calc(12);
+$off-canvas-label-font-weight: $font-weight-bold;
+$off-canvas-label-bg: $tuatara;
+$off-canvas-label-border-top: 1px solid scale-color($tuatara, $lightness: 14%);
+$off-canvas-label-border-bottom: none;
+$off-canvas-label-margin:0;
+$off-canvas-link-padding: rem-calc(10, 15);
+$off-canvas-link-color: rgba($white, 0.7);
+$off-canvas-link-border-bottom: 1px solid scale-color($off-canvas-bg, $lightness: -25%);
+$off-canvas-back-bg: $tuatara;
+$off-canvas-back-border-top: $off-canvas-label-border-top;
+$off-canvas-back-border-bottom: $off-canvas-label-border-bottom;
+$off-canvas-back-hover-bg: scale-color($off-canvas-back-bg, $lightness: -30%);
+$off-canvas-back-hover-border-top: 1px solid scale-color($off-canvas-label-bg, $lightness: 14%);
+$off-canvas-back-hover-border-bottom: none;
 
 // Off Canvas Menu Icon Variables
-// $tabbar-menu-icon-color: $white;
-// $tabbar-menu-icon-hover: scale-color($tabbar-menu-icon-color, $lightness: -30%);
+$tabbar-menu-icon-color: $white;
+$tabbar-menu-icon-hover: scale-color($tabbar-menu-icon-color, $lightness: -30%);
 
-// $tabbar-menu-icon-text-indent: rem-calc(35);
-// $tabbar-menu-icon-width: $tabbar-height;
-// $tabbar-menu-icon-height: $tabbar-height;
-// $tabbar-menu-icon-padding: 0;
+$tabbar-menu-icon-text-indent: rem-calc(35);
+$tabbar-menu-icon-width: $tabbar-height;
+$tabbar-menu-icon-height: $tabbar-height;
+$tabbar-menu-icon-padding: 0;
 
-// $tabbar-hamburger-icon-width: rem-calc(16);
-// $tabbar-hamburger-icon-left: false;
-// $tabbar-hamburger-icon-top: false;
-// $tabbar-hamburger-icon-thickness: 1px;
-// $tabbar-hamburger-icon-gap: 6px;
+$tabbar-hamburger-icon-width: rem-calc(16);
+$tabbar-hamburger-icon-left: false;
+$tabbar-hamburger-icon-top: false;
+$tabbar-hamburger-icon-thickness: 1px;
+$tabbar-hamburger-icon-gap: 6px;
 
 // Off Canvas Back-Link Overlay
-// $off-canvas-overlay-transition: background 300ms ease;
-// $off-canvas-overlay-cursor: pointer;
-// $off-canvas-overlay-box-shadow: -4px 0 4px rgba($black, 0.5), 4px 0 4px rgba($black, 0.5);
-// $off-canvas-overlay-background: rgba($white, 0.2);
-// $off-canvas-overlay-background-hover: rgba($white, 0.05);
+$off-canvas-overlay-transition: background 300ms ease;
+$off-canvas-overlay-cursor: pointer;
+$off-canvas-overlay-box-shadow: -4px 0 4px rgba($black, 0.5), 4px 0 4px rgba($black, 0.5);
+$off-canvas-overlay-background: rgba($white, 0.2);
+$off-canvas-overlay-background-hover: rgba($white, 0.05);
 
 // Transition Variables
-// $menu-slide: "transform 500ms ease";
+$menu-slide: "transform 500ms ease";
 
 // 19. Orbit
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// $include-html-orbit-classes: $include-html-classes;
+$include-html-orbit-classes: false;
 
 // We use these to control the caption styles
 // $orbit-container-bg: none;
@@ -910,7 +911,7 @@ $acronym-underline: 1px dotted $gainsboro;
 // 20. Pagination
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// $include-pagination-classes: $include-html-classes;
+$include-pagination-classes: false;
 
 // We use these to control the pagination container
 // $pagination-height: rem-calc(24);
@@ -943,7 +944,7 @@ $acronym-underline: 1px dotted $gainsboro;
 // 21. Panels
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// $include-html-panel-classes: $include-html-classes;
+$include-html-panel-classes: false;
 
 // We use these to control the background and border styles
 // $panel-bg: scale-color($white, $lightness: -5%);
@@ -968,7 +969,7 @@ $acronym-underline: 1px dotted $gainsboro;
 // 22. Pricing Tables
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// $include-html-pricing-classes: $include-html-classes;
+$include-html-pricing-classes: false;
 
 // We use this to control the border color
 // $price-table-border: solid 1px $gainsboro;
@@ -1020,11 +1021,11 @@ $acronym-underline: 1px dotted $gainsboro;
 // 23. Progress Bar
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// $include-html-media-classes: $include-html-classes;
+$include-html-media-classes: false;
 
 // We use this to set the progress bar height
 // $progress-bar-height: rem-calc(25);
-// $progress-bar-color: $vapor  ;
+// $progress-bar-color: $vapor;
 
 // We use these to control the border styles
 // $progress-bar-border-color: scale-color($white, $lightness: 20%);
@@ -1045,7 +1046,7 @@ $acronym-underline: 1px dotted $gainsboro;
 // 24. Range Slider
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// $include-html-range-slider-classes: $include-html-classes;
+$include-html-range-slider-classes: false;
 
 // These variables define the slider bar styles
 // $range-slider-bar-width: 100%;
@@ -1078,7 +1079,7 @@ $acronym-underline: 1px dotted $gainsboro;
 // 25. Reveal
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// $include-html-reveal-classes: $include-html-classes;
+$include-html-reveal-classes: false;
 
 // We use these to control the style of the reveal overlay.
 // $reveal-overlay-bg: rgba($black, .45);
@@ -1113,7 +1114,7 @@ $acronym-underline: 1px dotted $gainsboro;
 // 26. Side Nav
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// $include-html-nav-classes: $include-html-classes;
+$include-html-nav-classes: false;
 
 // We use this to control padding.
 // $side-nav-padding: rem-calc(14 0);
@@ -1150,7 +1151,7 @@ $acronym-underline: 1px dotted $gainsboro;
 // 27. Split Buttons
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// $include-html-button-classes: $include-html-classes;
+$include-html-button-classes: false;
 
 // We use these to control different shared styles for Split Buttons
 // $split-button-function-factor: 10%;
@@ -1189,7 +1190,7 @@ $acronym-underline: 1px dotted $gainsboro;
 // 28. Sub Nav
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// $include-html-nav-classes: $include-html-classes;
+$include-html-nav-classes: false;
 
 // We use these to control margin and padding
 // $sub-nav-list-margin: rem-calc(-4 0 18);
@@ -1219,7 +1220,7 @@ $acronym-underline: 1px dotted $gainsboro;
 // 29. Switch
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// $include-html-form-classes: $include-html-classes;
+$include-html-form-classes: false;
 
 // Controlling border styles and background colors for the switch container
 // $switch-border-color: scale-color($white, $lightness: -20%);
@@ -1258,7 +1259,7 @@ $acronym-underline: 1px dotted $gainsboro;
 // 30. Tables
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// $include-html-table-classes: $include-html-classes;
+$include-html-table-classes: false;
 
 // These control the background color for the table and even rows
 // $table-bg: $white;
@@ -1290,26 +1291,26 @@ $acronym-underline: 1px dotted $gainsboro;
 // 31. Tabs
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// $include-html-tabs-classes: $include-html-classes;
+$include-html-tabs-classes: $include-html-classes;
 
-// $tabs-navigation-padding: rem-calc(16);
-// $tabs-navigation-bg-color: $silver  ;
-// $tabs-navigation-active-bg-color: $white;
-// $tabs-navigation-hover-bg-color: scale-color($tabs-navigation-bg-color, $lightness: -6%);
-// $tabs-navigation-font-color: $jet;
-// $tabs-navigation-active-font-color: $tabs-navigation-font-color;
-// $tabs-navigation-font-size: rem-calc(16);
-// $tabs-navigation-font-family: $body-font-family;
+$tabs-navigation-padding: rem-calc(23);
+$tabs-navigation-bg-color: $body-bg;
+$tabs-navigation-active-bg-color: $white;
+$tabs-navigation-hover-bg-color: scale-color($tabs-navigation-bg-color, $lightness: -6%);
+$tabs-navigation-font-color: $aluminum;
+$tabs-navigation-active-font-color: $primary-color;
+$tabs-navigation-font-size: rem-calc(16);
+$tabs-navigation-font-family: $body-font-family;
 
-// $tabs-content-margin-bottom: rem-calc(24);
-// $tabs-content-padding: $column-gutter/2;
+$tabs-content-margin-bottom: rem-calc(50);
+$tabs-content-padding: $column-gutter/2;
 
-// $tabs-vertical-navigation-margin-bottom: 1.25rem;
+$tabs-vertical-navigation-margin-bottom: 1.25rem;
 
 // 32. Thumbnails
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// $include-html-media-classes: $include-html-classes;
+$include-html-media-classes: false;
 
 // We use these to control border styles
 // $thumb-border-style: solid;
@@ -1325,7 +1326,7 @@ $acronym-underline: 1px dotted $gainsboro;
 // 33. Tooltips
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// $include-html-tooltip-classes: $include-html-classes;
+$include-html-tooltip-classes: false;
 
 // $has-tip-border-bottom: dotted 1px $iron;
 // $has-tip-font-weight: $font-weight-bold;
@@ -1352,84 +1353,84 @@ $acronym-underline: 1px dotted $gainsboro;
 // 34. Top Bar
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// $include-html-top-bar-classes: $include-html-classes;
+$include-html-top-bar-classes: true;
 
 // Background color for the top bar
-// $topbar-bg-color: $oil;
-// $topbar-bg: $topbar-bg-color;
+$topbar-bg-color: $oil;
+$topbar-bg: rgba(0,0,0,0);
 
 // Height and margin
-// $topbar-height: 45px;
-// $topbar-margin-bottom: 0;
+$topbar-height: 45px;
+$topbar-margin-bottom: 0;
 
 // Controlling the styles for the title in the top bar
-// $topbar-title-weight: $font-weight-normal;
-// $topbar-title-font-size: rem-calc(17);
+$topbar-title-weight: $font-weight-normal;
+$topbar-title-font-size: rem-calc(17);
 
 // Style the top bar dropdown elements
-// $topbar-dropdown-bg: $oil;
-// $topbar-dropdown-link-color: $white;
-// $topbar-dropdown-link-bg: $oil;
-// $topbar-dropdown-link-weight: $font-weight-normal;
-// $topbar-dropdown-toggle-size: 5px;
-// $topbar-dropdown-toggle-color: $white;
-// $topbar-dropdown-toggle-alpha: 0.4;
+$topbar-dropdown-bg: rgba(0,0,0,0);
+$topbar-dropdown-link-color: $aluminum;
+$topbar-dropdown-link-bg: $ghost;
+$topbar-dropdown-link-weight: $header-font-weight;
+$topbar-dropdown-toggle-size: 5px;
+$topbar-dropdown-toggle-color: $white;
+$topbar-dropdown-toggle-alpha: 0.4;
 
 // Set the link colors and styles for top-level nav
-// $topbar-link-color: $white;
-// $topbar-link-color-hover: $white;
-// $topbar-link-color-active: $white;
-// $topbar-link-color-active-hover: $white;
-// $topbar-link-weight: $font-weight-normal;
-// $topbar-link-font-size: rem-calc(13);
-// $topbar-link-hover-lightness: -10%; // Darken by 10%
-// $topbar-link-bg: $topbar-bg;
-// $topbar-link-bg-color-hover: $charcoal;
-// $topbar-link-bg-hover: #272727;
-// $topbar-link-bg-active: $primary-color;
-// $topbar-link-bg-active-hover: scale-color($primary-color, $lightness: -14%);
-// $topbar-link-font-family: $body-font-family;
-// $topbar-link-text-transform: none;
-// $topbar-link-padding: $topbar-height / 3;
-// $topbar-back-link-size: $h5-font-size;
-// $topbar-link-dropdown-padding: 20px;
+$topbar-link-color: $white;
+$topbar-link-color-hover: $primary-color;
+$topbar-link-color-active: $white;
+$topbar-link-color-active-hover: $white;
+$topbar-link-weight: $header-font-weight;
+$topbar-link-font-size: rem-calc(28);
+$topbar-link-hover-lightness: -10%; // Darken by 10%
+$topbar-link-bg: $topbar-bg;
+$topbar-link-bg-hover: $ghost;
+$topbar-link-bg-color-hover: $topbar-link-bg-hover;
+$topbar-link-bg-active: $primary-color;
+$topbar-link-bg-active-hover: scale-color($primary-color, $lightness: -14%);
+$topbar-link-font-family: $header-font-family;
+$topbar-link-text-transform: none;
+$topbar-link-padding: $topbar-height / 3;
+$topbar-back-link-size: $h5-font-size;
+$topbar-link-dropdown-padding: 30px;
 
-// $topbar-button-font-size: 0.75rem;
-// $topbar-button-top: 7px;
+$topbar-button-font-size: 0.75rem;
+$topbar-button-top: 7px;
 
-// $topbar-dropdown-label-color: $monsoon;
-// $topbar-dropdown-label-text-transform: uppercase;
-// $topbar-dropdown-label-font-weight: $font-weight-bold;
-// $topbar-dropdown-label-font-size: rem-calc(10);
-// $topbar-dropdown-label-bg: $oil;
+$topbar-dropdown-label-color: $aluminum;
+$topbar-dropdown-label-text-transform: uppercase;
+$topbar-dropdown-label-font-weight: $header-font-weight;
+$topbar-dropdown-label-font-size: rem-calc(22);
+$topbar-dropdown-label-bg: $topbar-link-bg-hover;
 
 // Top menu icon styles
-// $topbar-menu-link-transform: uppercase;
-// $topbar-menu-link-font-size: rem-calc(13);
-// $topbar-menu-link-weight: $font-weight-bold;
-// $topbar-menu-link-color: $white;
-// $topbar-menu-icon-color: $white;
-// $topbar-menu-link-color-toggled: $jumbo;
-// $topbar-menu-icon-color-toggled: $jumbo;
+$topbar-menu-link-transform: uppercase;
+$topbar-menu-link-font-size: rem-calc(13);
+$topbar-menu-link-weight: $font-weight-bold;
+$topbar-menu-link-color: $white;
+$topbar-menu-icon-color: $white;
+$topbar-menu-link-color-toggled: $jumbo;
+$topbar-menu-icon-color-toggled: $jumbo;
 
 // Transitions and breakpoint styles
-// $topbar-transition-speed: 300ms;
+$topbar-transition-speed: 300ms;
 // Using rem-calc for the below breakpoint causes issues with top bar
-// $topbar-breakpoint: #{lower-bound($medium-range)}; // Change to 9999px for always mobile layout
-// $topbar-media-query: $medium-up;
+$topbar-breakpoint: #{lower-bound($medium-range)}; // Change to 9999px for always mobile layout
+$topbar-media-query: $medium-up;
 
 // Divider Styles
-// $topbar-divider-border-bottom: solid 1px  scale-color($topbar-bg-color, $lightness: 13%);
-// $topbar-divider-border-top: solid 1px scale-color($topbar-bg-color, $lightness: -50%);
+$topbar-divider-border-bottom: solid 1px  scale-color($topbar-bg-color, $lightness: 13%);
+$topbar-divider-border-top: solid 1px scale-color($topbar-bg-color, $lightness: -50%);
 
 // Sticky Class
-// $topbar-sticky-class: ".sticky";
-// $topbar-arrows: true; //Set false to remove the triangle icon from the menu item
+$topbar-sticky-class: ".sticky";
+$topbar-arrows: true; //Set false to remove the triangle icon from the menu item
 
 // 36. Visibility Classes
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// $include-html-visibility-classes: $include-html-classes;
-// $include-table-visibility-classes: true;
-// $include-legacy-visibility-classes: true;
-// $include-accessibility-classes: true;
+$include-html-visibility-classes: $include-html-classes;
+$include-table-visibility-classes: true;
+$include-legacy-visibility-classes: true;
+$include-accessibility-classes: true;
