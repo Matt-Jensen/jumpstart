@@ -116,6 +116,18 @@
 	window[ namespace ] = reveal;
 
 })();
+
+;(function($) {
+	'use strict';
+
+	// Prevent navigation jump due to interchange logo stagard loading
+	$(document).on('replace', '#logo', function (e, new_path, original_path) {
+		var $this = $(this);
+
+		window.setTimeout(function() { $this.removeClass('hide'); });
+	});
+
+})(jQuery);
 /* 
  * toggler.js
  * 

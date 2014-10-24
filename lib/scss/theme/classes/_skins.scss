@@ -1,7 +1,15 @@
 // Common skin classes, could be gradient backgrounds that are reused throughout etc.
 
-.s-sub-page-header {
+.s-frontpage-bg {
+	background: url(images/frontpage-bg.jpg);
+}
+
+.s-sub-page-header { 
 	background: url(images/header-small.jpg);
+}
+
+.s-frontpage-bg,
+.s-sub-page-header {
 	background-repeat: no-repeat;
 	background-position: top center;
 	background-size: auto;

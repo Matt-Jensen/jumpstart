@@ -1,1 +1,35 @@
 // Consider this a place for all your technical debt.  Use sparingly (;
+
+html.js.flexbox {
+	margin-top: 0 !important;
+}
+#wpadminbar {
+	display: none !important;
+}
+
+// Color all text highlighting
+@include text-highlight($color:$white, $background:$primary-color);
+
+#logo {
+	margin-top: $default-baseline;
+	position: relative;
+	z-index: 100;
+
+	img {
+		height: 76px;
+		margin-right: 95 - $topbar-link-padding - $default-baseline-val;
+	}
+}
+
+@media #{$small-only} {
+	#logo {
+		margin-bottom: $default-baseline;
+	}
+}
+
+@media #{$large-up} {
+	#logo {
+		margin-top: rem-calc(50);
+		margin-bottom: 0;
+	}
+}

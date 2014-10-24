@@ -13,7 +13,6 @@
 get_header(); ?>
 
 	<main id="blog-index" role="main">
-
 		<?php
 
             if ( have_posts() ) {

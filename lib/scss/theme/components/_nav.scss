@@ -1,0 +1,153 @@
+.fa-top-bar .top-bar-section {
+	@include clearfix();
+}
+
+// All links
+.fa-top-bar ul a {
+	@include font-smoothing();
+	text-decoration: none;
+}
+
+// Top layer
+.fa-top-bar .top-bar-section > ul > li {
+	height: auto;
+
+	> a {
+		&:hover {
+			text-shadow: 1px 1px 2px rgba(0,0,0,0.24);				
+		}
+	}
+}
+
+@media #{$medium-only} {
+
+	// All layers
+	.fa-top-bar .top-bar-section ul li a {
+		padding-left: $default-baseline !important;
+		padding-right: $default-baseline !important;
+	}
+
+	// Top layer
+	.fa-top-bar .top-bar-section > ul > li {
+		height: rem-calc(101);
+
+		> a {
+			font-size: rem-calc(22);
+			margin-top: rem-calc(25) !important;
+		}
+	}
+
+	// 2nd layer
+	.fa-top-bar .top-bar-section ul ul li > a {
+		font-size: rem-calc(18) !important;
+	}
+}
+
+@media #{$medium-up} {
+
+	// All links
+	.fa-top-bar .top-bar-section ul li a {
+		padding-top: rem-calc(20) !important;
+		padding-bottom: rem-calc(20) !important;
+	}
+
+	// Top layer
+	.fa-top-bar .top-bar-section > ul > li.has-dropdown > a:after {
+		display: none; // Hide carret
+	}
+
+	// 2nd Layer
+	.fa-top-bar .top-bar-section ul ul li > a {
+		display: inline-block;
+		@extend .-large-font-size;
+		padding-right: $topbar-link-padding + 20 !important;
+	}
+
+	// Dropdowns
+	.fa-top-bar .top-bar-section .right li .dropdown {
+		left: 0px;
+		right: auto;
+	}
+	
+	// Dropdown hovers
+	.fa-top-bar .top-bar-section .dropdown li:not(.has-form):not(.active):hover {
+		> a:not(.button) {
+			color: $white;
+			background: $secondary-light-color;
+		}
+	}
+}
+
+// Mixin for white navigation top bar puedo element
+@mixin fa-top-bar-active {
+	&:before {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		left: $topbar-link-padding;
+		right: $topbar-link-padding;
+		background: $white;
+		height: rem-calc(6);
+	}
+}
+
+@media #{$large-up} {
+	
+	// Top layer
+	.fa-top-bar .top-bar-section > ul > li {
+		height: rem-calc(128);
+
+		> a {
+			margin-top: rem-calc(50) !important;
+		}
+	}
+	
+	// Top Layer active
+	.fa-top-bar .top-bar-section > ul > li.active:not(.has-form) {
+		position: relative;
+
+		> a:not(.button) {
+			background: none;
+			@include fa-top-bar-active();
+		}
+	}
+
+	// Top Layer *Active* Dropdown
+	.fa-top-bar .top-bar-section > ul > li.has-dropdown {
+		
+		&.active:not(.has-form) {
+			position: relative;
+
+			> a:not(.button) {
+				@include fa-top-bar-active();
+			}
+
+			&:hover > a {
+				color: $primary-color;
+				background: $topbar-link-bg-hover;
+			}
+		}
+	}
+
+	// Top Layer Regular Dropdown
+	.fa-top-bar .top-bar-section > ul > li.has-dropdown {	
+		 > a {
+			padding-right: $topbar-link-padding !important;
+		}
+	}
+
+	// Top Layer No Dropdown Hover
+	.fa-top-bar .top-bar-section > ul > li:hover:not(.has-dropdown) {
+		position: relative;
+
+		> a {
+			background: none;
+			color: $white;
+		}
+
+		&:not(.active) > a {
+			text-decoration: underline;
+		}
+	}
+}

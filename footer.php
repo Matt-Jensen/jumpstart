@@ -6,12 +6,8 @@
  */
 ?>
 
-    <footer>
-        <nav>
-			<?php wp_nav_menu( array( 'theme_location' => 'footer_menu' ) ); ?>
-		</nav><!-- nav -->
-
-        This is the footer content.
+    <footer class="fa-footer">
+		
     </footer><!-- footer -->
 
 <?php wp_footer(); ?>

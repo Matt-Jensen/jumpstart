@@ -8,7 +8,6 @@
 get_header(); ?>
 
     <main id="front-page" role="main">
-
         <?php while ( have_posts() ) : the_post(); ?>
 
             <?php get_template_part( 'content', 'page' ); ?>
@@ -23,6 +22,8 @@ get_header(); ?>
         <?php endwhile; // end of the loop. ?>
 
     </main><!-- #main -->
+
+    <?php if( is_front_page() ) echo '</div><!-- header -->'; ?>
 
 <?php
 get_sidebar();
