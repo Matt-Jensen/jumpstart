@@ -107,12 +107,12 @@ $vapor       : #F6F6F6;
 $white-smoke : #F5F5F5;
 $silver      : #EFEFEF;
 $smoke       : #d8d8d8; // Theme
-$gainsboro   : #DDDDDD;
+$gainsboro   : #d4d4d4; // Theme
 $iron        : #909090; // Theme
 $base        : #AAAAAA;
 $aluminum    : #7a8894; // Theme
 $jumbo       : #888888;
-$monsoon     : #777777;
+$monsoon     : #4D565E; // Theme
 $steel       : #666666;
 $charcoal    : #555555;
 $tuatara     : #444444;
@@ -418,8 +418,8 @@ $include-html-nav-classes: false;
 $include-html-button-classes: $include-html-classes;
 
 // We use these to build padding for buttons.
-$button-tny: rem-calc(10);
-$button-sml: rem-calc(14);
+$button-tny: rem-calc(8);
+$button-sml: rem-calc(9);
 $button-med: rem-calc(16);
 $button-lrg: rem-calc(18);
 
@@ -428,7 +428,7 @@ $button-display: inline-block;
 $button-margin-bottom: rem-calc(20);
 
 // We use these to control button text styles.
-$button-font-family: $body-font-family;
+$button-font-family: lato, $body-font-family;
 $button-font-color: $white;
 $button-font-color-alt: $oil;
 $button-font-tny: rem-calc(11);
@@ -465,7 +465,7 @@ $button-disabled-cursor: $cursor-default-value;
 // 06. Button Groups
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-$include-html-button-classes: false;
+$include-html-button-classes: $include-html-classes;
 
 // Sets the margin for the right side by default, and the left margin if right-to-left direction is used
 // $button-bar-margin-opposite: rem-calc(10);
@@ -555,7 +555,7 @@ $include-html-dropdown-classes: false;
 // 09. Dropdown Buttons
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-$include-html-button-classes: false;
+$include-html-button-classes: $include-html-classes;
 
 // We use these to set the color of the pip in dropdown buttons
 // $dropdown-button-pip-color: $white;
@@ -1153,7 +1153,7 @@ $include-html-nav-classes: false;
 // 27. Split Buttons
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-$include-html-button-classes: false;
+$include-html-button-classes: $include-html-classes;
 
 // We use these to control different shared styles for Split Buttons
 // $split-button-function-factor: 10%;
@@ -1295,14 +1295,14 @@ $include-html-table-classes: false;
 
 $include-html-tabs-classes: $include-html-classes;
 
-$tabs-navigation-padding: rem-calc(23);
+$tabs-navigation-padding: rem-calc(28);
 $tabs-navigation-bg-color: $body-bg;
 $tabs-navigation-active-bg-color: $white;
-$tabs-navigation-hover-bg-color: scale-color($tabs-navigation-bg-color, $lightness: -6%);
+$tabs-navigation-hover-bg-color: $body-bg;
 $tabs-navigation-font-color: $aluminum;
 $tabs-navigation-active-font-color: $primary-color;
-$tabs-navigation-font-size: rem-calc(16);
-$tabs-navigation-font-family: $body-font-family;
+$tabs-navigation-font-size: rem-calc(20);
+$tabs-navigation-font-family: $header-font-family;
 
 $tabs-content-margin-bottom: rem-calc(50);
 $tabs-content-padding: $column-gutter/2;

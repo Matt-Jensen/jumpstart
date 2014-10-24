@@ -1,0 +1,65 @@
+blockquote {
+	position: relative;
+	padding: $default-baseline;
+	padding-top: rem-calc($large-baseline-val + 8);
+	border: 1px solid $smoke;
+	color: $body-font-color;
+	font-style: italic;
+
+	&:before {
+		content: '';
+		display: block;
+		position: absolute;
+		width: rem-calc(56);
+		height: rem-calc(56);
+		top: rem-calc(-29);
+		left: 50%;
+		margin-left: -30px;
+		right: 0;
+		background: url(images/speech-bubble.png);
+		background-color: $white;
+		background-repeat: no-repeat;
+		background-size: rem-calc(24) rem-calc(24);
+		background-position: center center;
+		border-radius: $global-rounded;
+		border: 1px solid $smoke;
+	}
+}
+
+blockquote p {
+	margin-bottom: 0;
+	color: $body-font-color;
+	font-style: italic;
+}
+
+@media #{$medium-up} {
+	blockquote {
+		padding: rem-calc(42);
+		padding-left: rem-calc(132);
+
+		&:before {
+			width: rem-calc(57);
+			height: rem-calc(57);
+			padding: 0;
+			top: 50%;
+			left: rem-calc(40);
+			margin-left: 0;
+			margin-top: rem-calc(-25);
+			background-size: 100% 100%;
+			background-color: none;
+			border: none;
+			border-radius: 0;
+		}
+	}
+}
+
+@media #{$large-up} {
+	blockquote {
+		padding: rem-calc(65);
+		padding-left: rem-calc(166);
+
+		&:before {
+			left: rem-calc(60);
+		}
+	}
+}

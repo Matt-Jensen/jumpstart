@@ -32,7 +32,7 @@ function jumpstart_scripts() {
     //wp_enqueue_script( 'foundation-orbit', LIB . '/foundation/js/foundation/foundation.orbit.js', array( 'jquery', 'foundation' ), '1.0', TRUE );
     //wp_enqueue_script( 'foundation-reveal', LIB . '/foundation/js/foundation/foundation.reveal.js', array( 'jquery', 'foundation' ), '1.0', TRUE );
     //wp_enqueue_script( 'foundation-slider', LIB . '/foundation/js/foundation/foundation.slider.js', array( 'jquery', 'foundation' ), '1.0', TRUE );
-    //wp_enqueue_script( 'foundation-tab', LIB . '/foundation/js/foundation/foundation.tab.js', array( 'jquery', 'foundation' ), '1.0', TRUE );
+    wp_enqueue_script( 'foundation-tab', LIB . '/foundation/js/foundation/foundation.tab.js', array( 'jquery', 'foundation' ), '1.0', TRUE );
     //wp_enqueue_script( 'foundation-tooltip', LIB . '/foundation/js/foundation/foundation.tooltip.js', array( 'jquery', 'foundation' ), '1.0', TRUE );
     //wp_enqueue_script( 'foundation-toolbar', LIB . '/foundation/js/foundation/foundation.toolbar.js', array( 'jquery', 'foundation' ), '1.0', TRUE );
     wp_enqueue_script( 'foundation-toolbar', LIB . '/foundation/js/foundation/foundation.topbar.js', array( 'jquery', 'foundation' ), '1.0', TRUE );

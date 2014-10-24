@@ -1,0 +1,73 @@
+$fa-tabs-link-padding: rem-calc(20);
+
+.fa-tabs {
+	box-shadow: inset 0 -1px 0 $gainsboro;
+	margin-bottom: $default-baseline !important;
+
+	dd > a {
+		text-decoration: none;
+		padding-left: $fa-tabs-link-padding;
+		padding-right: $fa-tabs-link-padding;
+	}
+
+	dd:first-child > a {
+		padding-left: 0;
+	}
+
+	dd.active {
+		border: 1px solid $gainsboro;
+		border-bottom: 1px solid $body-bg;
+
+		// Make active tabs appear over divider line
+		position: relative;
+		z-index: 10;
+	}
+
+	dd:not(.active) {
+		position: relative;
+		border: 1px solid transparent;
+		border-bottom: 1px solid transparent;
+
+		// Non active divider line
+		> a:after {
+			content: '';
+			display: block;
+			position: absolute;
+			height: rem-calc(28);
+			width: 1px;
+			right: -2px;
+			top: 50%;
+			margin-top: rem-calc(-14);
+			z-index: 1; // Appear under active tab
+			
+			background-color: $gainsboro;
+		}
+
+		// Hide divider line for last tab
+		&:last-child > a:after {
+			display: none;
+		}
+	}
+
+	dd.active:first-child {
+		border-left: 1px solid transparent;
+	}
+}
+
+.fa-tabs.vertical {
+	box-shadow: inset 1px 0px 0 $gainsboro;
+	margin-right: $default-baseline;
+
+	// Hide all divider lines
+	dd > a:after {
+		display: none;
+	}
+
+	dd:first-child > a {
+		padding-left: $fa-tabs-link-padding !important;
+	}
+
+	dd.active {
+		border-bottom: 1px solid $gainsboro;
+	}
+}

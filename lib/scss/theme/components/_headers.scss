@@ -1,6 +1,6 @@
 .fa-subpage-header {
-	margin-top: rem-calc(125);
-	margin-bottom: rem-calc(70);
+	padding-top: rem-calc($large-baseline-val - 12);
+	padding-bottom: $large-baseline;
 
 	h1, h2, h3, h4, h5, h6 {
 		margin-top: 0;
@@ -15,5 +15,25 @@
 
 	h2, h3, h4, h5, h6 {
 		@include font-smoothing();
+	}
+}
+
+@media #{$small-only} {
+	.fa-subpage-header {
+		background: url(images/small-header-mobile.jpg);
+	}
+}
+
+@media #{$medium-only} {
+	.fa-subpage-header {
+		padding-top: rem-calc(80);
+		padding-bottom: rem-calc(50);
+	}
+}
+
+@media #{$large-up} {
+	.fa-subpage-header {
+		padding-top: rem-calc(125);
+		padding-bottom: rem-calc(70);
 	}
 }

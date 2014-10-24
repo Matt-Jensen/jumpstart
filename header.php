@@ -10,6 +10,11 @@
     <title><?php wp_title( '|', true, 'right' ); ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+	<?php $fa_option_address = get_field('location', 'option'); ?>
+	<?php if( $fa_option_address && isset($fa_option_address['address']) && isset($fa_option_address['lat']) && isset($fa_option_address['lng']) ): ?>
+		<?php the_geolocation_meta_tags( $fa_option_address ); ?>
+	<?php endif; ?>
+
     <link rel="shortcut icon" href="<?php echo LIB; ?>branding/favicon.ico">
     <link rel="apple-touch-icon" sizes="152x152" href="<?php echo LIB; ?>branding/apple-touch-icon.png">
 	
@@ -41,8 +46,8 @@
 					</li>
 				</ul>
 
-				<section class="top-bar-section">
-					<ul class="right">
+				<section class="top-bar-section hide">
+					<ul class="-medium-fr -large-up-fl">
 						<?php echo jumpstart_the_topnav_lis('Header Menu'); ?>
 					</ul>
 				</section>

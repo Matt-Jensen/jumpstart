@@ -86,6 +86,170 @@
         "hide_on_screen": ""
     },
     {
+        "key": "group_544aadfb93332",
+        "title": "Related Content",
+        "fields": [
+            {
+                "key": "field_544aae2010999",
+                "label": "Related Content",
+                "name": "related_content",
+                "prefix": "",
+                "type": "repeater",
+                "instructions": "Promote content related to this page.",
+                "required": 0,
+                "conditional_logic": 0,
+                "min": "",
+                "max": 2,
+                "layout": "table",
+                "button_label": "Add Content",
+                "sub_fields": [
+                    {
+                        "key": "field_544aaeaf1099a",
+                        "label": "Header",
+                        "name": "header",
+                        "prefix": "",
+                        "type": "text",
+                        "instructions": "Enter the header",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "column_width": "",
+                        "default_value": "",
+                        "placeholder": "Enter the header",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": "",
+                        "readonly": 0,
+                        "disabled": 0
+                    },
+                    {
+                        "key": "field_544aaeda1099b",
+                        "label": "Content",
+                        "name": "content",
+                        "prefix": "",
+                        "type": "textarea",
+                        "instructions": "Enter a short description of the content linked to.",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "column_width": "",
+                        "default_value": "",
+                        "placeholder": "Enter here",
+                        "maxlength": "",
+                        "rows": "",
+                        "new_lines": "wpautop",
+                        "readonly": 0,
+                        "disabled": 0
+                    },
+                    {
+                        "key": "field_544aaf0c1099c",
+                        "label": "Button Text",
+                        "name": "button_text",
+                        "prefix": "",
+                        "type": "text",
+                        "instructions": "Enter the call to action text for the button.",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "column_width": "",
+                        "default_value": "",
+                        "placeholder": "Enter here",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": "",
+                        "readonly": 0,
+                        "disabled": 0
+                    },
+                    {
+                        "key": "field_544ab0d762c39",
+                        "label": "Internal Or External",
+                        "name": "internal_or_external",
+                        "prefix": "",
+                        "type": "radio",
+                        "instructions": "Specify if the related content is located on this site or another one.",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "column_width": "",
+                        "choices": {
+                            "internal": "Internal",
+                            "external": "External"
+                        },
+                        "other_choice": 0,
+                        "save_other_choice": 0,
+                        "default_value": "",
+                        "layout": "vertical"
+                    },
+                    {
+                        "key": "field_544aaf2d1099d",
+                        "label": "Internal Link",
+                        "name": "internal_link",
+                        "prefix": "",
+                        "type": "page_link",
+                        "instructions": "Select the related content you would like to link to within this site.",
+                        "required": 1,
+                        "conditional_logic": [
+                            {
+                                "rule_0": {
+                                    "field": "field_544ab0d762c39",
+                                    "operator": "==",
+                                    "value": "internal"
+                                }
+                            }
+                        ],
+                        "column_width": "",
+                        "post_type": "",
+                        "taxonomy": "",
+                        "allow_null": 0,
+                        "multiple": 0
+                    },
+                    {
+                        "key": "field_544ab07d62c38",
+                        "label": "External Link",
+                        "name": "external_link",
+                        "prefix": "",
+                        "type": "text",
+                        "instructions": "Select the related content you would like to link to outside this site.",
+                        "required": 1,
+                        "conditional_logic": [
+                            {
+                                "rule_0": {
+                                    "field": "field_544ab0d762c39",
+                                    "operator": "==",
+                                    "value": "external"
+                                }
+                            }
+                        ],
+                        "column_width": "",
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": "",
+                        "readonly": 0,
+                        "disabled": 0
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "page"
+                },
+                {
+                    "param": "page",
+                    "operator": "!=",
+                    "value": "5"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": ""
+    },
+    {
         "key": "group_5440755c324b4",
         "title": "Social Options",
         "fields": [

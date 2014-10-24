@@ -125,8 +125,8 @@
 		var $this = $(this);
 
 		window.setTimeout(function() { 
-			$this.parent().find('ul.right:first').removeClass('right').addClass('left');
 			$this.removeClass('hide');
+			$this.parent().find('.top-bar-section:first').removeClass('hide');
 		});
 	});
 

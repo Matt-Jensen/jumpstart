@@ -8,33 +8,53 @@ html.js.flexbox {
 }
 
 // Fix all font sizing
-body {
-	font-size: rem-calc(20);
+html {
+	font-size: $rem-base;
+}
+
+.button {
+	text-transform: uppercase;
+	letter-spacing: 2px;
+
+	&.small {
+		padding-left: rem-calc(13);
+		padding-right: rem-calc(13);
+	}
 }
 
 // Color all text highlighting
+
 @include text-highlight($color:$white, $background:$primary-color);
+
+
+// LOGO
 
 #logo {
 	margin-top: $default-baseline;
 	position: relative;
 	z-index: 100;
+	margin-bottom: $small-baseline;
+	padding-bottom: 0;
 
 	img {
-		height: 76px;
-		margin-right: 95 - $topbar-link-padding - $default-baseline-val;
+		height: rem-calc(45);
+		margin-right: $default-baseline;
 	}
 }
 
-@media #{$small-only} {
+@media #{$medium-up} {
 	#logo {
-		margin-bottom: $default-baseline;
+		margin-bottom: 0;
 	}
 }
 
 @media #{$large-up} {
 	#logo {
 		margin-top: rem-calc(50);
-		margin-bottom: 0;
+
+		img {
+			height: 76px;
+			margin-right: 95 - $topbar-link-padding - $default-baseline-val;
+		}
 	}
 }

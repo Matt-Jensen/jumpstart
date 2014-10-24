@@ -1,34 +1,5 @@
-.fa-blockquote {
-	padding: rem-calc(65);
-	padding-left: rem-calc(166);
-	position: relative;
-	border: 1px solid $smoke;
-	color: $body-font-color;
-	font-style: italic;
-
-	&:before {
-		content: '';
-		display: block;
-		position: absolute;
-		width: rem-calc(57);
-		height: rem-calc(57);
-		left: rem-calc(60);
-		top: 50%;
-		margin-top: -25px;
-		background: url(images/speech-bubble.png);
-		background-repeat: no-repeat;
-		
-	}
-}
-
-.fa-blockquote-p {
-	margin-bottom: 0;
-	color: $body-font-color;
-	font-style: italic;
-}
-
 .main-content {
-	margin-top: rem-calc(80);
+	margin-top: $large-baseline;
 
 	p {
 		margin-bottom: $large-baseline;
@@ -39,11 +10,13 @@
 		margin-bottom: rem-calc(38);
 	}
 
-	blockquote {
-		@extend .fa-blockquote;
-		
-		p {
-			@extend .fa-blockquote-p;
-		}
+	blockquote p {
+		margin-bottom: 0;
+	}
+}
+
+@media #{$medium-up} {
+	.main-content {
+		margin-top: rem-calc(64);
 	}
 }

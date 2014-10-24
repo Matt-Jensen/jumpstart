@@ -22,18 +22,34 @@
 	height: auto;
 
 	> a {
+		font-size: rem-calc(18);
+
 		&:hover {
 			text-shadow: 1px 1px 2px rgba(0,0,0,0.24);				
 		}
 	}
 }
 
+@media #{$small-only} {
+	
+	// Fix for Foundation JS height detection bug
+	.fa-top-bar .dropdown {
+		padding-bottom: rem-calc(75);
+	}
+
+	.fa-top-bar .top-bar-section:last-of-type {
+		padding-bottom: 15px;
+	}
+}
+
 @media #{$medium-only} {
 
-	// All layers
+	// All Links
 	.fa-top-bar .top-bar-section ul li a {
-		padding-left: $default-baseline !important;
-		padding-right: $default-baseline !important;
+		padding-top: rem-calc(8) !important;
+		padding-bottom: rem-calc(8) !important;
+		padding-left: rem-calc(9) !important;
+		padding-right: rem-calc(9) !important;
 	}
 
 	// Top layer
@@ -41,8 +57,15 @@
 		height: rem-calc(101);
 
 		> a {
-			font-size: rem-calc(22);
-			margin-top: rem-calc(25) !important;
+			font-size: rem-calc(17);
+			margin-top: rem-calc(16) !important;
+		}
+	}
+
+	// Top Layer Active
+	.fa-top-bar .top-bar-section > ul > li.active:not(.has-form) {
+		> a:not(.button) {
+			text-decoration: underline;
 		}
 	}
 
@@ -54,15 +77,37 @@
 
 @media #{$medium-up} {
 
-	// All links
-	.fa-top-bar .top-bar-section ul li a {
-		padding-top: rem-calc(20) !important;
-		padding-bottom: rem-calc(20) !important;
-	}
-
 	// Top layer
 	.fa-top-bar .top-bar-section > ul > li.has-dropdown > a:after {
 		display: none; // Hide carret
+	}
+
+	// Top Layer Active
+	.fa-top-bar .top-bar-section > ul > li.active:not(.has-form) {
+		> a:not(.button) {
+			background: none;
+		}
+	}
+
+	// Top Layer No Dropdown Hover
+	.fa-top-bar .top-bar-section > ul > li:hover:not(.has-dropdown) {
+		> a {
+			background: none;
+			color: $white;
+		}
+
+		&:not(.active) > a {
+			text-decoration: underline;
+		}
+	}
+
+	// Top Layer *Active* Dropdown
+	.fa-top-bar .top-bar-section > ul > li.has-dropdown.active:not(.has-form):hover {
+		> a {
+			color: $primary-color;
+			background: $topbar-link-bg-hover;
+			text-decoration: none;
+		}
 	}
 
 	// 2nd Layer
@@ -102,7 +147,7 @@
 }
 
 @media #{$large-up} {
-	
+
 	// Top layer
 	.fa-top-bar .top-bar-section > ul > li {
 		height: rem-calc(128);
@@ -112,12 +157,24 @@
 		}
 	}
 	
+	// All Links
+	.fa-top-bar .top-bar-section ul li a {
+		padding-top: rem-calc(20) !important;
+		padding-bottom: rem-calc(20) !important;
+		padding-left: $default-baseline !important;
+		padding-right: $default-baseline !important;
+	}
+	
+	// Top Layer active
+	.fa-top-bar .top-bar-section > ul > li > a {
+		font-size: rem-calc(22);
+	}
+
 	// Top Layer active
 	.fa-top-bar .top-bar-section > ul > li.active:not(.has-form) {
 		position: relative;
 
 		> a:not(.button) {
-			background: none;
 			@include fa-top-bar-active();
 		}
 	}
@@ -130,11 +187,6 @@
 
 			> a:not(.button) {
 				@include fa-top-bar-active();
-			}
-
-			&:hover > a {
-				color: $primary-color;
-				background: $topbar-link-bg-hover;
 			}
 		}
 	}
@@ -149,14 +201,12 @@
 	// Top Layer No Dropdown Hover
 	.fa-top-bar .top-bar-section > ul > li:hover:not(.has-dropdown) {
 		position: relative;
+	}
+}
 
-		> a {
-			background: none;
-			color: $white;
-		}
-
-		&:not(.active) > a {
-			text-decoration: underline;
-		}
+@media #{$xlarge-up} {
+	// Top Layer active
+	.fa-top-bar .top-bar-section > ul > li > a {
+		font-size: rem-calc(28);
 	}
 }
