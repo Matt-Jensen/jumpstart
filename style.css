@@ -399,9 +399,9 @@ body {
   padding: 0;
   margin: 0;
   font-family: source-sans-pro, lato, "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-  font-weight: normal;
+  font-weight: 100;
   font-style: normal;
-  line-height: 144%;
+  line-height: 164%;
   position: relative;
   cursor: auto; }
 
@@ -1360,7 +1360,7 @@ meta.foundation-mq-topbar {
       font-size: 0.94444rem;
       margin: 0; }
       .top-bar .name h1 a {
-        font-weight: normal;
+        font-weight: 100;
         color: #f1f1f1;
         width: 75%;
         display: block;
@@ -1437,7 +1437,7 @@ meta.foundation-mq-topbar {
       padding-left: 20px;
       font-family: athelas, times, 'times new roman', helvetica;
       font-size: 1.55556rem;
-      font-weight: normal;
+      font-weight: 100;
       text-transform: none; }
       .top-bar-section ul li > a.button {
         font-size: 1.55556rem;
@@ -1581,10 +1581,10 @@ meta.foundation-mq-topbar {
       width: 100%;
       height: auto; }
       .top-bar-section .dropdown li a {
-        font-weight: normal;
+        font-weight: 100;
         padding: 8px 20px; }
         .top-bar-section .dropdown li a.parent-link {
-          font-weight: normal; }
+          font-weight: 100; }
       .top-bar-section .dropdown li.title h5, .top-bar-section .dropdown li.parent-link {
         margin-bottom: 0;
         margin-top: 0;
@@ -1603,7 +1603,7 @@ meta.foundation-mq-topbar {
       margin-bottom: 0;
       text-transform: uppercase;
       color: #7a8894;
-      font-weight: normal;
+      font-weight: 100;
       font-size: 1.22222rem; }
 
 .js-generated {
@@ -1900,15 +1900,14 @@ a {
   text-decoration: underline;
   line-height: inherit; }
   a:hover, a:focus {
-    color: #13344a;
-    text-decoration: none; }
+    color: #13344a; }
   a img {
     border: none; }
 
 /* Default paragraph styles */
 p {
   font-family: inherit;
-  font-weight: normal;
+  font-weight: 100;
   font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 1.11111rem;
@@ -1924,7 +1923,7 @@ p {
 /* Default header styles */
 h1, h2, h3, h4, h5, h6 {
   font-family: athelas, times, 'times new roman', helvetica;
-  font-weight: normal;
+  font-weight: 100;
   font-style: normal;
   color: #163c56;
   text-rendering: optimizeLegibility;
@@ -1957,7 +1956,7 @@ h6 {
 .subheader {
   line-height: 1.4;
   color: #338bc6;
-  font-weight: normal;
+  font-weight: 100;
   margin-top: 0.2rem;
   margin-bottom: 0.5rem; }
 
@@ -1983,7 +1982,7 @@ small {
 
 code {
   font-family: Consolas, "Liberation Mono", Courier, monospace;
-  font-weight: normal;
+  font-weight: 100;
   color: #333333;
   background-color: #d1d8df;
   border-width: 1px;
@@ -3226,7 +3225,7 @@ th.hide-for-touch {
 
 .-sans-serif {
   font-family: source-sans-pro, lato, "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !important;
-  font-weight: normal !important;
+  font-weight: 100 !important;
   font-style: normal !important; }
 
 .-serif-ff {
@@ -4081,6 +4080,34 @@ th.hide-for-touch {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
 
+ul {
+  list-style: none; }
+  ul li {
+    position: relative;
+    padding-left: 1.88889rem; }
+    ul li:before {
+      content: '';
+      position: absolute;
+      top: 0.27778rem;
+      left: 0;
+      display: block;
+      height: 0.88889rem;
+      width: 0.88889rem;
+      background: url(images/ul-star.png);
+      background-repeat: no-repeat;
+      background-position: center center; }
+
+ul, ol {
+  padding-bottom: 1.66667rem; }
+  ul li, ol li {
+    margin-bottom: 0.61111rem; }
+
+.fa-top-bar ul li {
+  padding-left: 0;
+  margin-bottom: 0; }
+  .fa-top-bar ul li:before {
+    display: none; }
+
 .fa-top-bar .top-bar-section:after {
   content: "";
   display: table;
@@ -4167,6 +4194,38 @@ th.hide-for-touch {
     .fa-top-bar .top-bar-section > ul > li:hover:not(.has-dropdown):not(.active) > a {
       text-decoration: underline; } }
 
+.fa-blockquote, .main-content blockquote {
+  padding: 3.61111rem;
+  padding-left: 9.22222rem;
+  position: relative;
+  border: 1px solid #d8d8d8;
+  color: #272727;
+  font-style: italic; }
+  .fa-blockquote:before, .main-content blockquote:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 3.16667rem;
+    height: 3.16667rem;
+    left: 3.33333rem;
+    top: 50%;
+    margin-top: -25px;
+    background: url(images/speech-bubble.png);
+    background-repeat: no-repeat; }
+
+.fa-blockquote-p, .main-content blockquote p {
+  margin-bottom: 0;
+  color: #272727;
+  font-style: italic; }
+
+.main-content {
+  margin-top: 4.44444rem; }
+  .main-content p {
+    margin-bottom: 1.66667rem; }
+  .main-content hr {
+    margin-top: -0.55556rem;
+    margin-bottom: 2.11111rem; }
+
 /*--------------------------------------------------------------
 9. Technical Debt
 --------------------------------------------------------------*/
@@ -4175,6 +4234,9 @@ html.js.flexbox {
 
 #wpadminbar {
   display: none !important; }
+
+body {
+  font-size: 1.11111rem; }
 
 *::selection {
   color: #f1f1f1;

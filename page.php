@@ -12,21 +12,16 @@
 
 get_header(); ?>
 
-    <main id="page" role="main">
+    <main id="page" class="main-content row" role="main">
+        <div class="small-12 columns">
+            <?php while ( have_posts() ) : the_post(); ?>
 
-        <?php while ( have_posts() ) : the_post(); ?>
+                <?php if( isset($post->post_content) && strlen($post->post_content) ): ?>
+                    <?php echo wpautop($post->post_content); ?>
+                <?php endif; ?>
 
-            <?php get_template_part( 'content', 'page' ); ?>
-
-            <?php
-                // If comments are open or we have at least one comment, load up the comment template
-                if ( comments_open() || '0' != get_comments_number() ) :
-                    comments_template();
-                endif;
-            ?>
-
-        <?php endwhile; // end of the loop. ?>
-
+            <?php endwhile; // end of the loop. ?>
+        </div>
     </main><!-- #main -->
 <?php
 get_sidebar();

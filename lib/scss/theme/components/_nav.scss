@@ -1,3 +1,12 @@
+.fa-top-bar ul li {
+	padding-left: 0;
+	margin-bottom: 0;
+
+	&:before {
+		display: none;
+	}
+}
+
 .fa-top-bar .top-bar-section {
 	@include clearfix();
 }

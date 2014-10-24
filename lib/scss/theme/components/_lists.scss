@@ -1,0 +1,29 @@
+ul {
+	list-style: none;
+
+	li {
+		position: relative;
+		padding-left: rem-calc(34);
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: rem-calc(5);
+			left: 0;
+			display: block;
+			height: rem-calc(16);
+			width: rem-calc(16);
+			background: url(images/ul-star.png);
+			background-repeat: no-repeat;
+			background-position: center center;
+		}
+	}
+}
+
+ul, ol {
+	padding-bottom: $large-baseline;
+
+	li {
+		margin-bottom: rem-calc(11);
+	}
+}

@@ -7,6 +7,11 @@ html.js.flexbox {
 	display: none !important;
 }
 
+// Fix all font sizing
+body {
+	font-size: rem-calc(20);
+}
+
 // Color all text highlighting
 @include text-highlight($color:$white, $background:$primary-color);
 

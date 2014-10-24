@@ -1,0 +1,251 @@
+[
+    {
+        "key": "group_544981f2f0b20",
+        "title": "Home",
+        "fields": [
+            {
+                "key": "field_544981fa0e637",
+                "label": "Heading",
+                "name": "heading",
+                "prefix": "",
+                "type": "text",
+                "instructions": "The main heading on the home page.",
+                "required": 1,
+                "conditional_logic": 0,
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": "",
+                "readonly": 0,
+                "disabled": 0
+            },
+            {
+                "key": "field_5449826c0e638",
+                "label": "Text",
+                "name": "text",
+                "prefix": "",
+                "type": "textarea",
+                "instructions": "The text that appears below the heading.",
+                "required": 1,
+                "conditional_logic": 0,
+                "default_value": "",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": "",
+                "new_lines": "wpautop",
+                "readonly": 0,
+                "disabled": 0
+            },
+            {
+                "key": "field_544982ad0e639",
+                "label": "Button Text",
+                "name": "button_text",
+                "prefix": "",
+                "type": "text",
+                "instructions": "The text that appears in the button.",
+                "required": 1,
+                "conditional_logic": 0,
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": "",
+                "readonly": 0,
+                "disabled": 0
+            },
+            {
+                "key": "field_544982f80e63a",
+                "label": "Button Link",
+                "name": "button_link",
+                "prefix": "",
+                "type": "page_link",
+                "instructions": "Select to where the action button links.",
+                "required": 1,
+                "conditional_logic": 0,
+                "post_type": "",
+                "taxonomy": "",
+                "allow_null": 0,
+                "multiple": 0
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page",
+                    "operator": "==",
+                    "value": "5"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": ""
+    },
+    {
+        "key": "group_5440755c324b4",
+        "title": "Social Options",
+        "fields": [
+            {
+                "key": "field_544076aef4ef1",
+                "label": "Phone Number",
+                "name": "phone_number",
+                "prefix": "",
+                "type": "text",
+                "instructions": "Enter your desired phone number.",
+                "required": 0,
+                "conditional_logic": 0,
+                "default_value": "",
+                "placeholder": "Enter here",
+                "prepend": "",
+                "append": "",
+                "maxlength": "",
+                "readonly": 0,
+                "disabled": 0
+            },
+            {
+                "key": "field_544076d9f4ef2",
+                "label": "Fax Number",
+                "name": "fax_number",
+                "prefix": "",
+                "type": "text",
+                "instructions": "Enter your fax number.",
+                "required": 0,
+                "conditional_logic": 0,
+                "default_value": "",
+                "placeholder": "Enter here",
+                "prepend": "",
+                "append": "",
+                "maxlength": "",
+                "readonly": 0,
+                "disabled": 0
+            },
+            {
+                "key": "field_5440756eb4f76",
+                "label": "Twitter Handle",
+                "name": "twitter_handle",
+                "prefix": "",
+                "type": "text",
+                "instructions": "Enter your twitter @handle",
+                "required": 0,
+                "conditional_logic": 0,
+                "default_value": "",
+                "placeholder": "Enter here",
+                "prepend": "",
+                "append": "",
+                "maxlength": "",
+                "readonly": 0,
+                "disabled": 0
+            },
+            {
+                "key": "field_54407589b4f77",
+                "label": "Twitter ID",
+                "name": "twitter_id",
+                "prefix": "",
+                "type": "text",
+                "instructions": "Enter your twitter ID from: Gettwitterid.com",
+                "required": 0,
+                "conditional_logic": 0,
+                "default_value": "",
+                "placeholder": "Enter here",
+                "prepend": "",
+                "append": "",
+                "maxlength": "",
+                "readonly": 0,
+                "disabled": 0
+            },
+            {
+                "key": "field_5440759eb4f78",
+                "label": "Facebook ID",
+                "name": "facebook_id",
+                "prefix": "",
+                "type": "text",
+                "instructions": "Enter your facebook page ID from: Findmyfacebookid.com",
+                "required": 0,
+                "conditional_logic": 0,
+                "default_value": "",
+                "placeholder": "Enter here",
+                "prepend": "",
+                "append": "",
+                "maxlength": "",
+                "readonly": 0,
+                "disabled": 0
+            },
+            {
+                "key": "field_544075b9b4f79",
+                "label": "Location",
+                "name": "location",
+                "prefix": "",
+                "type": "google_map",
+                "instructions": "Select your address.",
+                "required": 0,
+                "conditional_logic": 0,
+                "center_lat": "29.424122",
+                "center_lng": "-98.493628",
+                "zoom": "",
+                "height": 250
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "options_page",
+                    "operator": "==",
+                    "value": "acf-options-social"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": ""
+    },
+    {
+        "key": "group_544967e3bedeb",
+        "title": "subpage",
+        "fields": [
+            {
+                "key": "field_5449680b9b7b0",
+                "label": "Sub heading",
+                "name": "sub_heading",
+                "prefix": "",
+                "type": "text",
+                "instructions": "The text to display beneath the page header.",
+                "required": 0,
+                "conditional_logic": 0,
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": "",
+                "readonly": 0,
+                "disabled": 0
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "page"
+                },
+                {
+                    "param": "page",
+                    "operator": "!=",
+                    "value": "5"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": ""
+    }
+]

@@ -42,7 +42,7 @@
 				</ul>
 
 				<section class="top-bar-section">
-					<ul class="left">
+					<ul class="right">
 						<?php echo jumpstart_the_topnav_lis('Header Menu'); ?>
 					</ul>
 				</section>

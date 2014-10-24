@@ -66,7 +66,7 @@ $rem-base: 18px;
 $base-font-size: 100%;
 
 // The $base-font-size is 100% while $base-line-height is 150%
-$base-line-height: 144%;
+$base-line-height: 164%;
 
 // We use this to control whether or not CSS classes come through in the gem files.
 $include-html-classes: true; 
@@ -88,7 +88,7 @@ $column-gutter: rem-calc(30);
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
 // We use these to define default font weights
-$font-weight-normal: normal !default;
+$font-weight-normal: 100 !default;
 $font-weight-bold: bold !default;
 
 // We use these as default colors throughout
@@ -106,7 +106,7 @@ $snow        : #F9F9F9;
 $vapor       : #F6F6F6;
 $white-smoke : #F5F5F5;
 $silver      : #EFEFEF;
-$smoke       : #EEEEEE;
+$smoke       : #d8d8d8; // Theme
 $gainsboro   : #DDDDDD;
 $iron        : #909090; // Theme
 $base        : #AAAAAA;
@@ -251,7 +251,7 @@ $paragraph-text-rendering: optimizeLegibility;
 
 // We use these to style anchors
 $anchor-text-decoration: underline;
-$anchor-text-decoration-hover: none;
+$anchor-text-decoration-hover: underline;
 $anchor-font-color: $primary-color;
 $anchor-font-color-hover: scale-color($primary-color, $lightness: -14%);
 
