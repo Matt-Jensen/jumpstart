@@ -1,3 +1,88 @@
+/**
+ * This is an example JS file.
+ *
+ * This is a description of the custom JS file.
+ */
+
+/**
+ * This is a custom JS function.
+ * 
+ * The dollar sign must be passed into the jQuery function due to "no-conflict" mode.
+ * See http://codex.wordpress.org/Function_Reference/wp_enqueue_script#jQuery_noConflict_Wrappers
+ * 
+ * @param {jQuery Library} $ Allow the dollar sign to be used as an alias for jQuery.
+ * @returns {undefined}
+ */
+
+;(function() {
+	'use strict';
+
+	var namespace = 'FIRSTAM';
+
+	var init = function() {
+		console.log('Let\'s get started!');
+	};
+
+	var themeDirectory = jQuery('body').data('theme-dir');
+
+	// Module reveal pattern
+	var reveal = {
+		initialize: init,
+		themeDir: themeDirectory
+	};
+
+	// Make available on the global scope
+	if( window[ namespace ] ) throw new Error('The apps global namespace: '+ namespace +' is already taken.');
+	window[ namespace ] = reveal;
+
+})();
+
+// Polyfills
+;(function(Modernizr, $) {
+	'use strict';
+
+    var addScript = function addScript(src) {
+        var script = document.createElement('script');
+        script.setAttribute('src', src);
+        script.setAttribute('type', 'text/javascript');
+        $('head:first').append(script);
+    };
+
+ 	if( !window.matchMedia ) addScript( window.FIRSTAM.themeDir + '/bower_components/matchMedia/matchMedia.js');
+
+})(Modernizr, jQuery);
+
+// Instantiate
+;(function( $ ) {
+	'use strict';
+
+    // Custom js code goes here ...
+
+    // Enable Foundation JS ...
+    $( document ).foundation();
+    
+    // Disable 300ms double tap watch on touch devices
+    FastClick.attach(document.body);
+
+    // Only runs if the browser does not natively support placeholders
+    $('input, textarea').placeholder();
+
+})(jQuery);
+// Header Display
+;(function($) {
+	'use strict';
+
+	// Prevent navigation jump due to interchange logo stagard loading
+	$(document).on('replace', '#logo', function (e, new_path, original_path) {
+		var $this = $(this);
+
+		window.setTimeout(function() { 
+			$this.removeClass('hide');
+			$this.parent().find('.top-bar-section:first').removeClass('hide');
+		});
+	});
+
+})(jQuery);
 /*
  *  jQuery Boilerplate - v3.3.4
  *  A jump-start for jQuery plugins development.
@@ -8,30 +93,15 @@
  */
 // the semi-colon before function invocation is a safety net against concatenated
 // scripts and/or other plugins which may not be closed properly.
-;(function ( $, window, document, undefined ) {
-
-		// undefined is used here as the undefined global variable in ECMAScript 3 is
-		// mutable (ie. it can be changed by someone else). undefined isn't really being
-		// passed in so we can ensure the value of it is truly undefined. In ES5, undefined
-		// can no longer be modified.
-
-		// window and document are passed through as local variable rather than global
-		// as this (slightly) quickens the resolution process and can be more efficiently
-		// minified (especially when both are regularly referenced in your plugin).
+;(function ( $, window, document, Foundation, undefined ) {
 
 		// Create the defaults once
-		var pluginName = "defaultPluginName",
-				defaults = {
-				propertyName: "value"
-		};
+		var pluginName = "interchangeClass";
+		var defaults = {};
 
 		// The actual plugin constructor
 		function Plugin ( element, options ) {
 				this.element = element;
-				// jQuery has an extend method which merges the contents of two or
-				// more objects, storing the result in the first object. The first object
-				// is generally empty as we don't want to alter the default options for
-				// future instances of the plugin
 				this.settings = $.extend( {}, defaults, options );
 				this._defaults = defaults;
 				this._name = pluginName;
@@ -50,7 +120,7 @@
 						console.log("xD");
 				},
 				yourOtherFunction: function () {
-						// some logic
+					// some logic
 				}
 		});
 
@@ -67,79 +137,4 @@
 				return this;
 		};
 
-})( jQuery, window, document );
-/**
- * This is an example JS file.
- *
- * This is a description of the custom JS file.
- */
-
-/**
- * This is a custom JS function.
- * 
- * The dollar sign must be passed into the jQuery function due to "no-conflict" mode.
- * See http://codex.wordpress.org/Function_Reference/wp_enqueue_script#jQuery_noConflict_Wrappers
- * 
- * @param {jQuery Library} $ Allow the dollar sign to be used as an alias for jQuery.
- * @returns {undefined}
- */
-
-;(function( $ ) {
-    // Custom js code goes here ...
-
-    // Enable Foundation JS ...
-    $( document ).foundation();
-    
-    // Disable 300ms double tap watch on touch devices
-    FastClick.attach(document.body);
-
-    // Only runs if the browser does not natively support placeholders
-    $('input, textarea').placeholder();
-
-})(jQuery);
-
-;(function() {
-	
-	var namespace = 'jumpstart';
-
-	var init = function() {
-		console.log('Let\'s get started!');
-	};
-
-	// Module reveal pattern
-	var reveal = {
-		initialize: init
-	};
-
-	// Make available on the global scope
-	if( window[ namespace ] ) throw new Error('The apps global namespace: '+ namespace +' is already taken.');
-	window[ namespace ] = reveal;
-
-})();
-
-;(function($) {
-	'use strict';
-
-	// Prevent navigation jump due to interchange logo stagard loading
-	$(document).on('replace', '#logo', function (e, new_path, original_path) {
-		var $this = $(this);
-
-		window.setTimeout(function() { 
-			$this.removeClass('hide');
-			$this.parent().find('.top-bar-section:first').removeClass('hide');
-		});
-	});
-
-})(jQuery);
-/* 
- * toggler.js
- * 
- * Select elements on your site to toggle open and close.
- */
-jQuery( document ).ready( function( $ ) {
-    $( "#toggle-button" ).click( function() {
-        $( "#toggle-container" ).slideToggle( 'fast', function() {
-            $( "#toggle-button" ).toggleClass( 'active' );
-        });
-    });
-});
+})( jQuery, window, document, Foundation );

@@ -1,10 +1,9 @@
 <?php // spits out the related content for a sub-page 
 
-//var_dump(get_field('related_content'));
 $fa_related_contents = get_field('related_content');
 ?>
 
-<?php if( count($fa_related_contents) ): ?>
+<?php if( $fa_related_contents && count($fa_related_contents) ): ?>
 	<div id="related-content" class="row -lmt -medium-up-xlmt">	
 		<?php foreach($fa_related_contents as $fa_rel_content): ?>
 			<div class="small-12 medium-6 columns">

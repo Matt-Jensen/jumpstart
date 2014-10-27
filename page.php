@@ -14,7 +14,7 @@ get_header(); ?>
 
     <main id="page" class="main-content row" role="main">
 
-        <div class="small-12 columns">
+        <!--<div class="small-12 columns">
             <dl class="tabs vertical fa-tabs" data-tab>
                 <dd class="active"><a href="#panel1">Tab 1</a></dd>
                 <dd><a href="#panel2">Tab 2</a></dd>
@@ -35,13 +35,13 @@ get_header(); ?>
                     <p>This is the fourth panel of the basic tab example. This is the fourth panel of the basic tab example.</p>
                 </div>
             </div>
-        </div>
+        </div>-->
 
         <div class="small-12 columns">
             <?php while ( have_posts() ) : the_post(); ?>
 
                 <?php if( isset($post->post_content) && strlen($post->post_content) ): ?>
-                    <?php echo wpautop($post->post_content); ?>
+                    <?php echo wpautop(do_shortcode($post->post_content)); ?>
                 <?php endif; ?>
 
             <?php endwhile; // end of the loop. ?>
