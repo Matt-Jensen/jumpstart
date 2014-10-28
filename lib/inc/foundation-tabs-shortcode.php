@@ -152,7 +152,7 @@ class JS_TABS_SHORTCODE {
 		self::$add_script = true;
 		if( is_string($atts) ) $atts = array();
 
-		$result .= '<dl class="tabs fa-tabs" data-interchange-class="[vertical, (small)]" data-tab>';
+		$result .= '<dl class="tabs fa-tabs" data-interchange-class="[vertical, (small)], [!vertical, (medium)]" data-tab>';
 
 		// Parse [tab-headers]
 		$tab_header_shortcodes = self::get_shortcodes('tab-header', $content);
