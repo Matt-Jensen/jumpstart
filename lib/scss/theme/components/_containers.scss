@@ -20,6 +20,10 @@
 		line-height: 1.5;
 		@extend .-large-font-size;
 	}
+
+	ul.gform_fields li {
+		padding-left: 0;
+	}
 }
 
 @media #{$medium-up} {

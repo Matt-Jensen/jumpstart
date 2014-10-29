@@ -5062,6 +5062,8 @@ ul, ol {
   .main-content big {
     display: block;
     line-height: 1.5; }
+  .main-content ul.gform_fields li {
+    padding-left: 0; }
 
 @media only screen and (min-width:40.063em) {
   .main-content {
