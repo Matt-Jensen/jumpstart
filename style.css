@@ -1293,7 +1293,7 @@ button, .button {
     padding-right: 0.88889rem;
     padding-bottom: 0.5rem;
     padding-left: 0.88889rem;
-    font-size: 0.61111rem; }
+    font-size: 0.5rem; }
   button.expand, .button.expand {
     padding-right: 0;
     padding-left: 0;
@@ -3772,7 +3772,7 @@ th.hide-for-touch {
 .-base-font-size {
   font-size: 1rem !important; }
 
-.-large-font-size, .fa-top-bar .top-bar-section ul ul li > a {
+.-large-font-size, .fa-top-bar .top-bar-section ul ul li > a, .main-content big {
   font-size: 1rem !important; }
 
 .-xlarge-font-size {
@@ -3786,7 +3786,7 @@ th.hide-for-touch {
     font-size: 0.88889rem !important; }
   .-base-font-size {
     font-size: 1rem !important; }
-  .-large-font-size, .fa-top-bar .top-bar-section ul ul li > a {
+  .-large-font-size, .fa-top-bar .top-bar-section ul ul li > a, .main-content big {
     font-size: 1.22222rem !important; }
   .-xlarge-font-size {
     font-size: 1.5rem !important; } }
@@ -4758,6 +4758,31 @@ th.hide-for-touch {
 /*--------------------------------------------------------------
 8. Theme Components
 --------------------------------------------------------------*/
+.button.toggled {
+  background-color: #acacac; }
+  .button.toggled:focus {
+    background-color: #acacac;
+    outline-color: #acacac !important; }
+  .button.toggled:hover {
+    background-color: #797979; }
+
+@media only screen and (min-width:40.063em) {
+  .button.toggled {
+    position: relative; }
+    .button.toggled.tiny {
+      padding-right: 2.22222rem; }
+    .button.toggled:after {
+      content: '';
+      position: absolute;
+      z-index: 2;
+      top: 50%;
+      margin-top: -4px;
+      height: 0.38889rem;
+      width: 0.66667rem;
+      right: 0.83333rem;
+      background: url(images/chevron-up.png);
+      background-repeat: no-repeat; } }
+
 .fa-subpage-header {
   padding-top: 1rem;
   padding-bottom: 1.66667rem; }
@@ -4808,6 +4833,36 @@ ul, ol {
   padding-bottom: 1.66667rem; }
   ul li, ol li {
     margin-bottom: 0.61111rem; }
+
+.fa-media-list li {
+  padding-left: 0;
+  padding: 1.33333rem 0 2.77778rem;
+  border-bottom: 1px solid #d4d4d4; }
+  .fa-media-list li:first-child {
+    padding-top: 0; }
+  .fa-media-list li:last-child {
+    border-bottom-width: 0; }
+  .fa-media-list li:before {
+    background: none; }
+.fa-media-list li.toggled {
+  background-color: #fbfbfb;
+  background-image: -webkit-radial-gradient(#fbfbfb, #f0f0f0 88%);
+  background-image: radial-gradient(#{$shape-size-spec} #fbfbfb, #f0f0f0 88%); }
+.fa-media-list .button {
+  margin-top: 1.55556rem; }
+.fa-media-list .fa-media-list__avatar {
+  width: 10.44444rem;
+  margin-bottom: 0.83333rem; }
+.fa-media-list .fa-media-list__content p:last-child {
+  margin-bottom: 0; }
+
+@media only screen and (min-width:40.063em) {
+  .fa-media-list .fa-media-list__avatar {
+    float: left; }
+  .fa-media-list .fa-media-list__content {
+    width: 100%;
+    padding-left: 12.44444rem;
+    margin-top: -7px; } }
 
 .fa-top-bar ul li {
   padding-left: 0;
@@ -4931,10 +4986,15 @@ ul, ol {
     margin-bottom: 2.11111rem; }
   .main-content blockquote p {
     margin-bottom: 0; }
+  .main-content big {
+    display: block;
+    line-height: 1.5; }
 
 @media only screen and (min-width:40.063em) {
   .main-content {
-    margin-top: 3.55556rem; } }
+    margin-top: 3.55556rem; }
+    .main-content big {
+      margin-bottom: 3.33333rem; } }
 
 blockquote {
   position: relative;
@@ -5032,7 +5092,8 @@ blockquote p {
   .fa-tabs.vertical dd:first-child > a {
     padding-left: 1.11111rem !important; }
   .fa-tabs.vertical dd.active {
-    border-bottom: 1px solid #d4d4d4; }
+    border-bottom: 1px solid #d4d4d4;
+    border-left: 1px solid #f0f0f0; }
 
 /*--------------------------------------------------------------
 9. Technical Debt
@@ -5052,6 +5113,8 @@ html {
   .button.small {
     padding-left: 0.72222rem;
     padding-right: 0.72222rem; }
+  .button.alert:focus {
+    outline-color: #9a2929; }
 
 *::selection {
   color: #f1f1f1;

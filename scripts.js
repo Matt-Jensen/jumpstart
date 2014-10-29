@@ -36,9 +36,10 @@
 				this.parseClasslist( rawClassList );
 
 				$(window).on('resize.' + this.settings.eventNamespace, Foundation.utils.throttle(function(e){
-					$('[data-interchange-class]').trigger('interchangeClass');
+					$('[data-interchange-class]').trigger('interchangeClass'); // Trigger interchange class update
 				}, 300));
 
+				// Update interchange class
 				$(this.element).on('interchangeClass.'+ this.settings.eventNamespace, function() {
 					_this.runClassList.call(_this);
 				});
@@ -71,7 +72,9 @@
 					}
 				}
 
-				return this.interClassList = result;
+				this.interClassList = result;
+
+				return result;
 			},
 
 			// Remove all class names prefixed with `!`
@@ -139,6 +142,85 @@
 		};
 
 })( jQuery, window, document, Foundation );
+/*
+ *  Toggle Show Hide
+ *  A jump-start for jQuery plugins development.
+ *  http://jqueryboilerplate.com
+ *
+ *  Made by Zeno Rocha
+ *  Under MIT License
+ */
+
+;(function ( $, window, document, undefined ) {
+
+		// Create the defaults once
+		var pluginName = "toggleShowHide",
+			defaults = {
+				eventNamespace: 'jumpstart',
+				activeText: false,
+				hideText: false
+			};
+
+		// The actual plugin constructor
+		function Plugin ( element, options ) {
+				this.element = element;
+				this.$element = $(element);
+				this.settings = $.extend( {}, defaults, options );
+				this._defaults = defaults;
+				this._name = pluginName;
+				this.init();
+		}
+
+		// Avoid Plugin.prototype conflicts
+		$.extend(Plugin.prototype, {
+				init: function () {
+					var _this = this;
+					this.isActive = true;
+					this.activeText = this.settings.activeText || this.$element.text();
+					this.inactiveText = this.settings.hideText || 'Close';
+					
+					this.$element.on('click', function() {
+						_this.isActive = !_this.isActive;
+						_this.toggleSelf();
+						_this.toggleSiblings();
+					});
+				},
+				
+				toggleSelf: function () {
+					var toggleText = this.isActive ? this.activeText : this.inactiveText;
+					this.$element
+						.toggleClass('toggled')
+						.text( toggleText );
+					return this;
+				},
+
+				toggleSiblings: function() {
+					var $parentContainer = this.$element.parents('[data-toggle-show-hide-container]:first');
+					
+					if( !$parentContainer.length ) return;
+					$parentContainer
+						.toggleClass('toggled')
+						.find('[data-show-hide-target]')
+						.each(function(i, el) {
+							$(el).toggleClass('hide');
+						});
+
+					return this;
+				}
+		});
+
+		$.fn[ pluginName ] = function ( options ) {
+				this.each(function() {
+						if ( !$.data( this, "plugin_" + pluginName ) ) {
+								$.data( this, "plugin_" + pluginName, new Plugin( this, options ) );
+						}
+				});
+
+				// chain jQuery functions
+				return this;
+		};
+
+})( jQuery, window, document );
 /**
  * This is an example JS file.
  *
@@ -209,6 +291,8 @@
     $('input, textarea').placeholder();
 
     $('[data-interchange-class]').interchangeClass();
+
+    $('[data-toggle-show-hide]').toggleShowHide();
 
 })(jQuery);
 // Header Display

@@ -1,0 +1,37 @@
+.button.toggled {
+	background-color: $silver;
+
+	&:focus {
+		background-color: $silver;
+		outline-color: $silver !important;
+	}
+
+	&:hover {
+		background-color: darken($silver, 20);
+	}
+}
+
+@media #{$medium-up} {
+	.button.toggled {
+		position: relative;
+		
+		&.tiny {
+			padding-right: rem-calc(40);
+		}
+
+		&:after {
+			content: '';
+			position: absolute;
+			z-index: 2;
+			top: 50%;
+			margin-top: -4px;
+			height: rem-calc(7);
+			width: rem-calc(12);
+
+			right: rem-calc(15);
+
+			background: url(images/chevron-up.png);
+			background-repeat: no-repeat;
+		}
+	}
+}

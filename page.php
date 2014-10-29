@@ -12,30 +12,9 @@
 
 get_header(); ?>
 
-    <main id="page" class="main-content row" role="main">
+<?php include( locate_template( 'partials/inc-headers.php' ) ); ?>
 
-        <!--<div class="small-12 columns">
-            <dl class="tabs vertical fa-tabs" data-tab>
-                <dd class="active"><a href="#panel1">Tab 1</a></dd>
-                <dd><a href="#panel2">Tab 2</a></dd>
-                <dd><a href="#panel3">Tab 3</a></dd>
-                <dd><a href="#panel4">Tab 4</a></dd>
-            </dl>
-            <div class="tabs-content">
-                <div class="content active" id="panel1">
-                    <p>This is the first panel of the basic tab example. This is the first panel of the basic tab example.</p>
-                </div>
-                <div class="content" id="panel2">
-                    <p>This is the second panel of the basic tab example. This is the second panel of the basic tab example.</p>
-                </div>
-                <div class="content" id="panel3">
-                    <p>This is the third panel of the basic tab example. This is the third panel of the basic tab example.</p>
-                </div>
-                <div class="content" id="panel4">
-                    <p>This is the fourth panel of the basic tab example. This is the fourth panel of the basic tab example.</p>
-                </div>
-            </div>
-        </div>-->
+    <main id="page" class="main-content row" role="main">
 
         <div class="small-12 columns">
             <?php while ( have_posts() ) : the_post(); ?>

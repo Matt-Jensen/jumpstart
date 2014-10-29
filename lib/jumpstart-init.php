@@ -30,9 +30,12 @@ require_once 'inc/clean-front-end.php';                         // Clean up WP j
 require_once 'inc/admin.php';                                   // Customize the admin section.
 require_once 'inc/utility-functions.php';                       // Add theme support and run some filters.
 require_once 'inc/advanced-custom-fields.php';                // Call any custom ACF functions.
-//require_once 'inc/cpt-init.php';                              // Magically load any Custom Posts Types and Custom Taxonomies.
+require_once 'inc/cpt-init.php';                              // Magically load any Custom Posts Types and Custom Taxonomies.
 require_once 'inc/responsive-content.php';					// Logic related to generating responsive content.
 require_once 'inc/seo.php';									// Functions realated to search engine indexing
 
 // SHORTCODES
 require_once 'inc/foundation-tabs-shortcode.php';
+require_once 'inc/foundation-row-shortcode.php';
+require_once 'inc/big-tag-shortcode.php';
+require_once 'inc/team-members-shortcode.php';

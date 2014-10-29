@@ -27,3 +27,55 @@ ul, ol {
 		margin-bottom: rem-calc(11);
 	}
 }
+
+.fa-media-list {
+	li {
+		padding-left: 0;
+		padding: rem-calc(24) 0 rem-calc(50);
+		border-bottom: 1px solid $gainsboro;
+
+		&:first-child {
+			padding-top: 0;
+		}
+
+		&:last-child {
+			border-bottom-width: 0;
+		}
+
+		&:before { background: none; }
+	}
+
+	li.toggled {
+		@include radial-gradient(#fbfbfb, $body-bg 88%);
+	}
+
+	.button {
+		margin-top: rem-calc(28);
+	}
+
+	.fa-media-list__avatar {
+		width: rem-calc(188);
+		margin-bottom: $default-baseline;
+	}
+
+	.fa-media-list__content {
+		p:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+@media #{$medium-up} {
+	.fa-media-list {
+
+		.fa-media-list__avatar {
+			float: left;
+		}
+
+		.fa-media-list__content {
+			width: 100%;
+			padding-left: rem-calc(188 + 36);
+			margin-top: -7px;
+		}
+	}
+}

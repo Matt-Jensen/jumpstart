@@ -53,7 +53,3 @@
 				</section>
 			</nav><!-- nav -->
 		</div>
-	<?php if( !is_front_page() ): ?>
-		<?php include( locate_template( 'partials/inc-headers.php' ) ); ?>
-		</div><!-- header -->
-	<?php endif; ?>

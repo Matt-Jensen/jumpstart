@@ -13,10 +13,20 @@
 	blockquote p {
 		margin-bottom: 0;
 	}
+
+	big {
+		display: block;
+		line-height: 1.5;
+		@extend .-large-font-size;
+	}
 }
 
 @media #{$medium-up} {
 	.main-content {
 		margin-top: rem-calc(64);
+
+		big {
+			margin-bottom: rem-calc(60);
+		}
 	}
 }

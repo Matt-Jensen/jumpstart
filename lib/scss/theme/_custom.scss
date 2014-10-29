@@ -20,6 +20,10 @@ html {
 		padding-left: rem-calc(13);
 		padding-right: rem-calc(13);
 	}
+
+	&.alert:focus {
+		outline-color: $alert-color;
+	}
 }
 
 // Color all text highlighting

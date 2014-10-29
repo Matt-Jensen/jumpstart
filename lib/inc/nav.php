@@ -18,9 +18,9 @@ if( !function_exists('jumpstart_get_topnav_lis') && !function_exists('jumpstart_
 		$child_res = '';
 		foreach( $children as $child ) {
 			$child_res .= '<li';
-			if( (integer)$child->ID === (integer)$active_id ) $child_res .= ' class="active"';
+			if( (integer)$child->ID == (integer)$active_id ) $child_res .= ' class="active"';
 			$child_res .= '>';
-				$child_res .= '<a href="'. get_permalink( $child->ID ) .'">'. $child->post_title .'</a>';
+				$child_res .= '<a href="'. $child->url .'">'. $child->title .'</a>';
 			$child_res .= '</li>';
 		}
 
@@ -40,16 +40,14 @@ if( !function_exists('jumpstart_get_topnav_lis') && !function_exists('jumpstart_
 
 			$page_is_active = $item->object_id === $current_id;
 			$page_link_tag = '<a href="'. $item->url . '">'. $item->title .'</a>';
-			$page_children = get_children( 'post_type=page&orderby=post_date&order=DESC&post_parent='. $item->object_id );
+			$page_children = get_nav_menu_item_children( $items, $item->ID );
 
 			// If page has child pages
 			if( count($page_children) ) {
 				$page_child_is_active = false;
 
 				foreach( $page_children as $page_child ) {
-					if( $current_id === $page_child->ID ) {
-						$page_child_is_active = true;
-					}
+					if( $current_id === $page_child->ID ) $page_child_is_active = true;
 				}
 
 				$result .= '<li class="has-dropdown';

@@ -59,7 +59,7 @@ gulp.task('script-tasks', function() {
         .pipe(concat('vendor.js'))
         .pipe(gulp.dest(jsDestination));
 
-    return gulp.src(['./lib/js/interchange-class.jquery.js', './lib/js/main.js', './lib/js/header.js'])
+    return gulp.src(['./lib/js/interchange-class.jquery.js', './lib/js/toggle-show-hide.jquery.js', './lib/js/main.js', './lib/js/header.js'])
             .pipe(jsHint())
             .pipe(jsHint.reporter('default'))
             .pipe(concat('scripts.js'))

@@ -86,7 +86,7 @@ class JS_TABS_SHORTCODE {
 		$result .= '<div class="content';
 		if( $tab_id === self::$active ) $result .= ' active';
 		$result .= '" id="'. $tab_id .'">';
-			$result .='<p>'. $tab_content['content'] .'</p>';
+			$result .='<p>'. do_shortcode($tab_content['content']) .'</p>';
 		return $result .= '</div>';
 	}
 

@@ -69,5 +69,6 @@ $fa-tabs-link-padding: rem-calc(20);
 
 	dd.active {
 		border-bottom: 1px solid $gainsboro;
+		border-left: 1px solid $body-bg;
 	}
 }
