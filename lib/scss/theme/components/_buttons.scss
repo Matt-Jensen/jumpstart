@@ -35,3 +35,21 @@
 		}
 	}
 }
+
+
+///////////////////
+// Hollow button
+///////////////////
+
+.fa-hallow-button {
+	background: none;
+	text-shadow: 1px 1px 2px rgba(0,0,0,.42);
+	border: 2px solid $white;
+	border-radius: 2px;
+	padding: rem-calc(10) rem-calc(20) rem-calc(12);
+	@include font-smoothing();
+
+	&:hover {
+		background: none;
+	}
+}

@@ -26,7 +26,7 @@
 </head>
 
 <body data-theme-dir="<?php echo get_template_directory_uri();?>">
-	<div class="<?php if( is_front_page() ){ echo 's-frontpage-bg'; } else { echo 's-sub-page-header'; } ?>">
+	<div class="<?php if( is_front_page() ){ echo 's-front-page'; } else { echo 's-sub-page-header'; } ?>">
 		<div class="row">
 			<nav class="small-12 columns top-bar fa-top-bar" data-topbar role="navigation">
 				

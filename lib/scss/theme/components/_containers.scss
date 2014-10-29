@@ -1,5 +1,6 @@
 .main-content {
 	margin-top: $large-baseline;
+	margin-bottom: $large-baseline;
 
 	p {
 		margin-bottom: $large-baseline;
@@ -24,9 +25,46 @@
 @media #{$medium-up} {
 	.main-content {
 		margin-top: rem-calc(64);
+		margin-bottom: rem-calc(64);
 
 		big {
 			margin-bottom: rem-calc(60);
 		}
+	}
+}
+
+////////////////////
+// HERO CONTAINER
+///////////////////
+
+.fa-hero-container {
+	text-align: center;
+	@include vertical-center();
+}
+
+.fa-hero-container__header {
+	color: $white;
+	@extend .mega-text;
+}
+
+.fa-hero-container__copy {
+	color: $white;
+}
+
+.fa-hero-container__button {
+	@extend .-base-font-size;
+	@extend .fa-hallow-button;
+}
+
+@media #{$medium-up} {
+	.fa-hero-container {
+		padding: 0 $default-baseline;
+	}
+
+	.fa-hero-container__copy {
+		width: 80%;
+		max-width: rem-calc(840);
+		margin: rem-calc($large-baseline-val - 10) auto em-calc($large-baseline-val + 4);
+		font-size: rem-calc(20);
 	}
 }

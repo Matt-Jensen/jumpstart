@@ -79,3 +79,31 @@ ul, ol {
 		}
 	}
 }
+
+
+/////////////////
+// fa-icon-list
+/////////////////
+
+.fa-icon-list {
+	padding-left: 0;
+	list-style: none;
+	font-size: 0;
+
+	li {
+		display: inline-block;
+		padding: 0 rem-calc(2);
+
+		&:before {
+			background: none;
+		}
+
+		&:first-child {
+			padding-left: 0;
+		}
+
+		&:last-child {
+			padding-right: 0;
+		}
+	}
+}

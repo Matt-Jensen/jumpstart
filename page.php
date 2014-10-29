@@ -25,9 +25,10 @@ get_header(); ?>
 
             <?php endwhile; // end of the loop. ?>
         </div>
-    </main><!-- #main -->
 
-    <?php include( locate_template( 'partials/related-content.php' ) ); ?>
+        <?php include( locate_template( 'partials/related-content.php' ) ); ?>
+
+    </main><!-- #main -->
 
 <?php
 get_sidebar();

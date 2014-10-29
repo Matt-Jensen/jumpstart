@@ -33,7 +33,7 @@
                 "placeholder": "",
                 "maxlength": "",
                 "rows": "",
-                "new_lines": "wpautop",
+                "new_lines": "",
                 "readonly": 0,
                 "disabled": 0
             },
@@ -75,6 +75,157 @@
                     "param": "page",
                     "operator": "==",
                     "value": "5"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": ""
+    },
+    {
+        "key": "group_5440755c324b4",
+        "title": "Main Options",
+        "fields": [
+            {
+                "key": "field_544076aef4ef1",
+                "label": "Phone Number",
+                "name": "phone_number",
+                "prefix": "",
+                "type": "text",
+                "instructions": "Enter your desired phone number.",
+                "required": 0,
+                "conditional_logic": 0,
+                "default_value": "",
+                "placeholder": "Enter here",
+                "prepend": "",
+                "append": "",
+                "maxlength": "",
+                "readonly": 0,
+                "disabled": 0
+            },
+            {
+                "key": "field_5451178de3f21",
+                "label": "Email",
+                "name": "email",
+                "prefix": "",
+                "type": "email",
+                "instructions": "Enter a company email.",
+                "required": 0,
+                "conditional_logic": 0,
+                "default_value": "",
+                "placeholder": "Enter here",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_544076d9f4ef2",
+                "label": "Fax Number",
+                "name": "fax_number",
+                "prefix": "",
+                "type": "text",
+                "instructions": "Enter your fax number.",
+                "required": 0,
+                "conditional_logic": 0,
+                "default_value": "",
+                "placeholder": "Enter here",
+                "prepend": "",
+                "append": "",
+                "maxlength": "",
+                "readonly": 0,
+                "disabled": 0
+            },
+            {
+                "key": "field_5440759eb4f78",
+                "label": "Facebook Public Profile Link",
+                "name": "facebook_public_profile_link",
+                "prefix": "",
+                "type": "text",
+                "instructions": "Enter the link to a facebook public profile.",
+                "required": 0,
+                "conditional_logic": 0,
+                "default_value": "",
+                "placeholder": "Enter here",
+                "prepend": "",
+                "append": "",
+                "maxlength": "",
+                "readonly": 0,
+                "disabled": 0
+            },
+            {
+                "key": "field_5440756eb4f76",
+                "label": "Twitter Handle",
+                "name": "twitter_handle",
+                "prefix": "",
+                "type": "text",
+                "instructions": "Enter your twitter @handle",
+                "required": 0,
+                "conditional_logic": 0,
+                "default_value": "",
+                "placeholder": "Enter here",
+                "prepend": "",
+                "append": "",
+                "maxlength": "",
+                "readonly": 0,
+                "disabled": 0
+            },
+            {
+                "key": "field_545139be92e16",
+                "label": "Linkedin Public Profile Link",
+                "name": "linkedin_public_profile_link",
+                "prefix": "",
+                "type": "text",
+                "instructions": "Enter the link to a Linkedin public profile.",
+                "required": 0,
+                "conditional_logic": 0,
+                "default_value": "",
+                "placeholder": "Enter here",
+                "prepend": "",
+                "append": "",
+                "maxlength": "",
+                "readonly": 0,
+                "disabled": 0
+            },
+            {
+                "key": "field_544075b9b4f79",
+                "label": "Location",
+                "name": "location",
+                "prefix": "",
+                "type": "google_map",
+                "instructions": "Select your address.",
+                "required": 0,
+                "conditional_logic": 0,
+                "center_lat": "29.424122",
+                "center_lng": "-98.493628",
+                "zoom": "",
+                "height": 250
+            },
+            {
+                "key": "field_5451163354213",
+                "label": "About First American",
+                "name": "about_first_american",
+                "prefix": "",
+                "type": "textarea",
+                "instructions": "Write a one paragraph description of First American to appear in the footer of the site.",
+                "required": 0,
+                "conditional_logic": 0,
+                "default_value": "",
+                "placeholder": "Enter here",
+                "maxlength": "",
+                "rows": "",
+                "new_lines": "",
+                "readonly": 0,
+                "disabled": 0
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "options_page",
+                    "operator": "==",
+                    "value": "acf-options-social"
                 }
             ]
         ],
@@ -239,126 +390,23 @@
                     "param": "page",
                     "operator": "!=",
                     "value": "5"
+                },
+                {
+                    "param": "page_template",
+                    "operator": "!=",
+                    "value": "template-tabbed-child-sections.php"
                 }
-            ]
-        ],
-        "menu_order": 0,
-        "position": "normal",
-        "style": "default",
-        "label_placement": "top",
-        "instruction_placement": "label",
-        "hide_on_screen": ""
-    },
-    {
-        "key": "group_5440755c324b4",
-        "title": "Social Options",
-        "fields": [
-            {
-                "key": "field_544076aef4ef1",
-                "label": "Phone Number",
-                "name": "phone_number",
-                "prefix": "",
-                "type": "text",
-                "instructions": "Enter your desired phone number.",
-                "required": 0,
-                "conditional_logic": 0,
-                "default_value": "",
-                "placeholder": "Enter here",
-                "prepend": "",
-                "append": "",
-                "maxlength": "",
-                "readonly": 0,
-                "disabled": 0
-            },
-            {
-                "key": "field_544076d9f4ef2",
-                "label": "Fax Number",
-                "name": "fax_number",
-                "prefix": "",
-                "type": "text",
-                "instructions": "Enter your fax number.",
-                "required": 0,
-                "conditional_logic": 0,
-                "default_value": "",
-                "placeholder": "Enter here",
-                "prepend": "",
-                "append": "",
-                "maxlength": "",
-                "readonly": 0,
-                "disabled": 0
-            },
-            {
-                "key": "field_5440756eb4f76",
-                "label": "Twitter Handle",
-                "name": "twitter_handle",
-                "prefix": "",
-                "type": "text",
-                "instructions": "Enter your twitter @handle",
-                "required": 0,
-                "conditional_logic": 0,
-                "default_value": "",
-                "placeholder": "Enter here",
-                "prepend": "",
-                "append": "",
-                "maxlength": "",
-                "readonly": 0,
-                "disabled": 0
-            },
-            {
-                "key": "field_54407589b4f77",
-                "label": "Twitter ID",
-                "name": "twitter_id",
-                "prefix": "",
-                "type": "text",
-                "instructions": "Enter your twitter ID from: Gettwitterid.com",
-                "required": 0,
-                "conditional_logic": 0,
-                "default_value": "",
-                "placeholder": "Enter here",
-                "prepend": "",
-                "append": "",
-                "maxlength": "",
-                "readonly": 0,
-                "disabled": 0
-            },
-            {
-                "key": "field_5440759eb4f78",
-                "label": "Facebook ID",
-                "name": "facebook_id",
-                "prefix": "",
-                "type": "text",
-                "instructions": "Enter your facebook page ID from: Findmyfacebookid.com",
-                "required": 0,
-                "conditional_logic": 0,
-                "default_value": "",
-                "placeholder": "Enter here",
-                "prepend": "",
-                "append": "",
-                "maxlength": "",
-                "readonly": 0,
-                "disabled": 0
-            },
-            {
-                "key": "field_544075b9b4f79",
-                "label": "Location",
-                "name": "location",
-                "prefix": "",
-                "type": "google_map",
-                "instructions": "Select your address.",
-                "required": 0,
-                "conditional_logic": 0,
-                "center_lat": "29.424122",
-                "center_lng": "-98.493628",
-                "zoom": "",
-                "height": 250
-            }
-        ],
-        "location": [
+            ],
             [
                 {
-                    "param": "options_page",
+                    "param": "page_template",
                     "operator": "==",
-                    "value": "acf-options-social"
+                    "value": "template-tabbed-child-sections.php"
+                },
+                {
+                    "param": "page_type",
+                    "operator": "==",
+                    "value": "parent"
                 }
             ]
         ],
@@ -371,7 +419,7 @@
     },
     {
         "key": "group_544967e3bedeb",
-        "title": "subpage",
+        "title": "Sub Heading",
         "fields": [
             {
                 "key": "field_5449680b9b7b0",
@@ -402,6 +450,68 @@
                     "param": "page",
                     "operator": "!=",
                     "value": "5"
+                },
+                {
+                    "param": "page_template",
+                    "operator": "!=",
+                    "value": "template-tabbed-child-sections.php"
+                }
+            ],
+            [
+                {
+                    "param": "page_type",
+                    "operator": "==",
+                    "value": "parent"
+                },
+                {
+                    "param": "page_template",
+                    "operator": "==",
+                    "value": "template-tabbed-child-sections.php"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": ""
+    },
+    {
+        "key": "group_5450153f1d08d",
+        "title": "Tabbed Children",
+        "fields": [
+            {
+                "key": "field_5450156b6dde9",
+                "label": "Tab Order",
+                "name": "tab_order",
+                "prefix": "",
+                "type": "number",
+                "instructions": "Select the order in which you'd like this tab to appear.",
+                "required": 1,
+                "conditional_logic": 0,
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "min": 1,
+                "max": "",
+                "step": 1,
+                "readonly": 0,
+                "disabled": 0
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page_template",
+                    "operator": "==",
+                    "value": "template-tabbed-child-sections.php"
+                },
+                {
+                    "param": "page_type",
+                    "operator": "==",
+                    "value": "child"
                 }
             ]
         ],

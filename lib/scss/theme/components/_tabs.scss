@@ -72,3 +72,15 @@ $fa-tabs-link-padding: rem-calc(20);
 		border-left: 1px solid $body-bg;
 	}
 }
+
+@media #{$small-only} {
+	.tabs-content {
+		margin-bottom: $default-baseline;
+	}
+}
+
+@media #{$medium-up} {
+	.main-content .tabs-content:last-child {
+		margin-bottom: 0;
+	}
+}

@@ -62,3 +62,22 @@ html {
 		}
 	}
 }
+
+// Front Page
+
+#front-page { 
+	margin-top: -4px; // fix gap between it and nav
+	height: rem-calc(640);
+}
+
+@media #{$medium-up} {
+	#front-page { 
+		height: rem-calc(700);
+	}
+}
+
+@media #{$large-up} {
+	#front-page { 
+		height: rem-calc(884);
+	}
+}

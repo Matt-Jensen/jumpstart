@@ -111,16 +111,19 @@ include( locate_template( 'partials/inc-headers.php' ) );
 			<?php endif; ?>
 
 	    </div>
+		<?php 
+
+		////////////////////
+		// RELATED CONTENT
+		///////////////////
+
+		$related_contents_post = $parent_post;
+		include( locate_template( 'partials/related-content.php' ) );
+		?>
+		
 	</main>
 
 <?php 
-
-////////////////////
-// RELATED CONTENT
-///////////////////
-
-$related_contents_post = $parent_post;
-include( locate_template( 'partials/related-content.php' ) );
 
 get_sidebar();
 get_footer();

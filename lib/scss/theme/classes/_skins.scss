@@ -1,6 +1,7 @@
 // Common skin classes, could be gradient backgrounds that are reused throughout etc.
 
 @media #{$small-only} {
+	.s-front-page nav,
 	.s-sub-page-header nav {
 		background: $monsoon;
 		background-position: center center;
@@ -8,10 +9,6 @@
 }
 
 @media #{$medium-up} {
-	.s-frontpage-bg {
-		background: url(images/frontpage-bg.jpg);
-	}
-
 	.s-sub-page-header { 
 		background: url(images/header-small.jpg);
 	}
@@ -22,4 +19,35 @@
 	background-repeat: no-repeat;
 	background-position: top center;
 	background-size: cover;
+}
+
+// Front Page
+.s-front-page {
+	background: none;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	#front-page {
+		background: url(images/small-home-bg.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+}
+
+@media #{$medium-up} {
+	.s-front-page {
+		background: url(images/medium-home-bg.jpg) no-repeat;
+		background-size: cover;
+
+		#front-page {
+			background: none;
+		}
+	}
+}
+
+@media #{$large-up} {
+	.s-front-page {
+		background: url(images/large-home-bg.jpg) no-repeat;
+		background-size: cover;
+	}
 }

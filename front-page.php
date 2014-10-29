@@ -8,19 +8,19 @@
 get_header(); ?>
 
     <main id="front-page" role="main">
-        <?php while ( have_posts() ) : the_post(); ?>
+        <div class="fa-hero-container">
+            <?php if( get_field('heading') ): ?>
+                <h1 class="fa-hero-container__header"><?php the_field('heading'); ?></h1>
+            <?php endif; ?>
+           
+            <?php if( get_field('text') ): ?>
+                <p class="fa-hero-container__copy"><?php the_field('text'); ?></p>
+            <?php endif; ?>
 
-            <?php get_template_part( 'content', 'page' ); ?>
-
-            <?php
-                // If comments are open or we have at least one comment, load up the comment template
-                if ( comments_open() || '0' != get_comments_number() ) :
-                    comments_template();
-                endif;
-            ?>
-
-        <?php endwhile; // end of the loop. ?>
-
+            <?php if( get_field('button_text') && get_field('button_link') ): ?>
+                <a class="button fa-hero-container__button" href="<?php the_field('button_link'); ?>"><?php the_field('button_text'); ?></a>
+            <?php endif; ?>
+        </div>
     </main><!-- #main -->
 
     <?php if( is_front_page() ) echo '</div><!-- header -->'; ?>

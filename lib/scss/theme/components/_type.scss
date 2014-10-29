@@ -1,0 +1,16 @@
+.mega-text {
+	font-size: rem-calc(39);
+	line-height: 1.1;
+}
+
+@media #{$medium-up} {
+	.mega-text {
+		font-size: rem-calc(64);
+	}
+}
+
+@media #{$xlarge-up} {
+	.mega-text {
+		font-size: rem-calc(81);
+	}
+}
