@@ -15,6 +15,7 @@ html {
 .button {
 	text-transform: uppercase;
 	letter-spacing: 2px;
+	font-weight: bold;
 
 	&.small {
 		padding-left: rem-calc(13);

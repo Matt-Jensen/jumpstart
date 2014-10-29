@@ -4903,9 +4903,19 @@ ul, ol {
   .fa-media-list li:before {
     background: none; }
 .fa-media-list li.toggled {
-  background-color: #fbfbfb;
-  background-image: -webkit-radial-gradient(#fbfbfb, #f0f0f0 88%);
-  background-image: radial-gradient(#{$shape-size-spec} #fbfbfb, #f0f0f0 88%); }
+  /*@include radial-gradient(#fbfbfb, $body-bg 88%);*/
+  background: -moz-radial-gradient(center, ellipse cover, #fbfbfb 0%, #f0f0f0 88%);
+  /* FF3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 88%, color-stop(0%, #fbfbfb), color-stop(88%, #f0f0f0));
+  /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover, #fbfbfb 0%, #f0f0f0 88%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center, ellipse cover, #fbfbfb 0%, #f0f0f0 88%);
+  /* Opera 12+ */
+  background: -ms-radial-gradient(center, ellipse cover, #fbfbfb 0%, #f0f0f0 88%);
+  /* IE10+ */
+  background: radial, ellipse at center, #fbfbfb 0%, #f0f0f0 88%;
+  /* W3C */ }
 .fa-media-list .button {
   margin-top: 1.55556rem; }
 .fa-media-list .fa-media-list__avatar {
@@ -5097,6 +5107,10 @@ ul, ol {
     margin: 1.11111rem auto 1.88889rem;
     font-size: 1.11111rem; } }
 
+@media only screen and (min-width:90.063em) {
+  .fa-hero-container__header {
+    display: inline-block; } }
+
 blockquote {
   position: relative;
   padding: 0.83333rem;
@@ -5249,7 +5263,8 @@ html {
 
 .button {
   text-transform: uppercase;
-  letter-spacing: 2px; }
+  letter-spacing: 2px;
+  font-weight: bold; }
   .button.small {
     padding-left: 0.72222rem;
     padding-right: 0.72222rem; }

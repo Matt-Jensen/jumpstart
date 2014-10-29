@@ -72,3 +72,7 @@
 		font-size: rem-calc(20);
 	}
 }
+
+@media #{$xlarge-up} {
+	.fa-hero-container__header { display: inline-block; } // Fix firefox bug
+}
