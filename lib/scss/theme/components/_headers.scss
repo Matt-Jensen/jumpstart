@@ -24,7 +24,7 @@
 	}
 }
 
-@media #{$medium-only} {
+@media #{$medium-up} {
 	.fa-subpage-header {
 		padding-top: rem-calc(80);
 		padding-bottom: rem-calc(50);
@@ -33,7 +33,7 @@
 
 @media #{$large-up} {
 	.fa-subpage-header {
-		padding-top: rem-calc(125);
-		padding-bottom: rem-calc(70);
+		padding-top: rem-calc(115);
+		padding-bottom: rem-calc(54);
 	}
 }

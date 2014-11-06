@@ -51,8 +51,8 @@
 					</li>
 				</ul>
 
-				<section class="top-bar-section hide">
-					<ul class="-medium-fr -large-up-fl">
+				<section class="top-bar-section hide -medium-up-tac -small-tal">
+					<ul class="-inline-block">
 						<?php echo jumpstart_the_topnav_lis('Header Menu'); ?>
 					</ul>
 				</section>

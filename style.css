@@ -4860,15 +4860,15 @@ th.hide-for-touch {
   .fa-subpage-header {
     background: url(images/small-header-mobile.jpg); } }
 
-@media only screen and (min-width:40.063em) and (max-width:64em) {
+@media only screen and (min-width:40.063em) {
   .fa-subpage-header {
     padding-top: 4.44444rem;
     padding-bottom: 2.77778rem; } }
 
 @media only screen and (min-width:64.063em) {
   .fa-subpage-header {
-    padding-top: 6.94444rem;
-    padding-bottom: 3.88889rem; } }
+    padding-top: 6.38889rem;
+    padding-bottom: 3rem; } }
 
 ul {
   list-style: none; }
@@ -5270,6 +5270,9 @@ html {
     padding-right: 0.72222rem; }
   .button.alert:focus {
     outline-color: #9a2929; }
+
+.top-bar-section .-inline-block, .top-bar-section .-small-inline-block, .top-bar-section .-medium-inline-block, .top-bar-section .-medium-up-inline-block, .top-bar-section .-large-inline-block, .top-bar-section .-large-up-inline-block {
+  display: inline-block; }
 
 *::selection {
   color: #f1f1f1;

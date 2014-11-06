@@ -27,6 +27,10 @@ html {
 	}
 }
 
+.top-bar-section .-inline-block {
+	display: inline-block;
+}
+
 // Color all text highlighting
 
 @include text-highlight($color:$white, $background:$primary-color);
